@@ -1,5 +1,5 @@
+//https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
-// load the things we need
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
@@ -9,7 +9,7 @@ var userSchema = mongoose.Schema({
     local            : {
         email        : String,
         password     : String,
-    };
+    }
 
 });
 

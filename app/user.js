@@ -1,4 +1,4 @@
-//login code was rferenced from
+//login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
 var mongoose = require('mongoose');

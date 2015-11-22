@@ -1,4 +1,4 @@
-<!-- //login code was rferenced from
+<!-- //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local -->
 <!doctype html>
 <html>
@@ -22,16 +22,27 @@
             <div class = "collapse navbar-collapse navHeadCollapse">
                     <!-- for later mobile mini menu to collapse -->
                     <ul class = "nav navbar-nav navbar-right">
-                        <li class = "active"><a href="/games">Games</a></li>
+                        <li class = "active"><a href="profile.ejs">Games</a></li>
                         <li class = "active"><a href="/chat">Chat</a></li>
                         <li class = "active"><a href="/messenger">Messenger</a></li>
                         <li class = "active"><a href="/logout">Logout</a></li>
                     </ul>
             </div>
         </div>
-    <div class="container" id="gameArea">
+    <div class="container" id="gameArea" href="">
+            
 
-
+    </div>
+    <div class ="container">
+        <!--fill div with content from profile.ejs, what am I doing wrong?:Maurice:-->
+        <button type="button" onclick="return fillDiv(1)">Fill Div</button>
+        <script type = "text/javascript">
+            function fillDiv(){
+                $('#gameArea').load('/views/profile.ejs');
+                return false;
+            };
+            
+        </script>
     </div>
 </div>
 </body>

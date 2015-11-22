@@ -1,4 +1,4 @@
-//login code was rferenced from
+//login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 module.exports = function(app, passport) {
 
@@ -59,6 +59,11 @@ module.exports = function(app, passport) {
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
+    });
+    
+    //game page
+    app.get('/chat', function(req,res){
+        res.render('index.ejs');
     });
 };
 

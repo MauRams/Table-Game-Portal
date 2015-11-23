@@ -12,6 +12,15 @@
     <style>
         body        { padding-top:80px; }
     </style>
+    
+    
+    
+        <!-- we need JQUERY to do JQUERY tricks -->
+    <script src="jquery-1.11.3.js" type="text/javascript"></script>
+    
+    
+    
+    
 </head>
 <body>
 <div class="container" id="mainContain">
@@ -29,20 +38,34 @@
                     </ul>
             </div>
         </div>
-    <div class="container" id="gameArea" href="">
+    <div class="container" id="gameArea">
             
 
     </div>
     <div class ="container">
         <!--fill div with content from profile.ejs, what am I doing wrong?:Maurice:-->
+        <!--static content is not handled and i'm not sure about JS code as well AND there is no such root as - /views/profile.ejs IN routers.js:
+        JQUERY libary was not linked as well-->
+       
+       
+       <!--
         <button type="button" onclick="return fillDiv(1)">Fill Div</button>
         <script type = "text/javascript">
             function fillDiv(){
                 $('#gameArea').load('/views/profile.ejs');
                 return false;
             };
+        </script>
+        -->
+        <!--i would recommend to use more advanced ajax code:-->
+        <button type="button" onclick="javascript:fillDiv()">Fill Div</button>
+        <script>
+            function fillDiv(){
+                $('#gameArea').load('/profile');
+            }
             
         </script>
+        
     </div>
 </div>
 </body>

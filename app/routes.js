@@ -2,6 +2,23 @@
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 module.exports = function(app, passport) {
 
+        //ADDING ROOT FOR PROFILE TEST LOAD
+        
+        
+        
+        
+        
+        
+            app.get('/profile', isLoggedIn, function(req, res) {
+        res.render('profile.ejs');
+            });
+
+
+
+
+
+
+
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================

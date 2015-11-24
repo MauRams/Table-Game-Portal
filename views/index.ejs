@@ -16,10 +16,10 @@
     
     <script>
     $(document).ready(function(){
-$('li').hover(function(){
+        $('li').hover(function(){
    
-   $(this).find('ul>li').fadeToggle(1000); 
-});
+        $(this).find('ul>li').fadeToggle(1000); 
+        });
     });
     
     </script>
@@ -29,9 +29,10 @@ $('li').hover(function(){
     <div class = "navbar-brand">
         <a href="/index.ejs">Table Game Portal</a>
     </div>
-        <div class  ="nav navbar-right">
+    <!-- static navbar -->
+        <div class  ="nav navbar-right static">
             <div class = "collapse navbar-collapse navHeadCollapse">
-                    <!-- for later mobile mini menu to collapse -->
+                    <!-- for later mobile mini menu to collapse, need to research the syntax again on this -->
                     <ul class = "nav navbar-nav navbar-right">
 
 
@@ -56,11 +57,15 @@ $('li').hover(function(){
                     </ul>
             </div>
         </div>
-    <div class="container" id="gameArea">
-            
-
     </div>
-    <div class ="container">
+    <div class="container" id="gameArea">
+            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
+            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
+            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
+            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
+<!-- rearranged the order of the divs to keep the navbar in a seperate static div -->
+    </div>
+    <div class ="container" id="chatWindow">
         <!--fill div with content from profile.ejs, what am I doing wrong?:Maurice:-->
         <!--static content is not handled and i'm not sure about JS code as well AND there is no such root as - /views/profile.ejs IN routers.js:
         JQUERY libary was not linked as well-->
@@ -79,12 +84,11 @@ $('li').hover(function(){
         <button type="button" onclick="javascript:fillDiv()">Fill Div</button>
         <script>
             function fillDiv(){
-                $('#gameArea').load('/profile');
+                $('#chatWindow').load('/profile');
             }
             
         </script>
         
     </div>
-</div>
 </body>
 </html>

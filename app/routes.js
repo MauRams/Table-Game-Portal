@@ -48,6 +48,12 @@ module.exports = function(app, passport) {
         // render the page and pass in any flash data if it exists
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
+    app.get('/Chat', function(req, res) {
+
+        // render the page and pass in any flash data if it exists
+        res.render('Welcome.ejs', { message: req.flash('signupMessage') });
+    });
+
 
     // process the signup form
     app.post('/signup', passport.authenticate('local-signup',{

@@ -4,4 +4,58 @@
 		-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	}
+ body { padding-top:80px;background-image:url('http://www.html.am/images/backgrounds/background-image-2.gif') }
 
+ul{
+
+     margin:10px;
+     padding:0;
+     list-style:none;
+     }
+
+
+        ul li{
+        background:#ff3385;
+        display:none;
+        font-size:24px;
+        font-weight: bold;
+        }
+
+        ul li a{
+
+        text-decoration:none;
+        color:#fff;
+        }
+
+       
+#ul1 li a{
+
+	width:100px;
+	height:50px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+.navbar-brand {
+
+	width:300px;
+	height:50px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	 background:#ff3385
+}
+
+.navbar-brand a{
+
+	    color:#fff;
+        font-size:24px;
+        font-weight: bold;
+}
+.navbar-brand a:hover{
+
+text-decoration:none;
+color:#f2f2f2;
+};

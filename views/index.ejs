@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     
-    <style>
-        body        { padding-top:80px;background-image:url('http://www.html.am/images/backgrounds/background-image-2.gif') }
-    </style>
-    
-    
+   
     
         <!-- we need JQUERY to do JQUERY tricks -->
     <script src="jquery-1.11.3.js" type="text/javascript"></script>
     
+    <script>
+    $(document).ready(function(){
+$('li').hover(function(){
+   
+   $(this).find('ul>li').fadeToggle(1000); 
+});
+    });
     
-    
-    
+    </script>
 </head>
 <body>
 <div class="container" id="mainContain">
@@ -31,7 +33,23 @@
             <div class = "collapse navbar-collapse navHeadCollapse">
                     <!-- for later mobile mini menu to collapse -->
                     <ul class = "nav navbar-nav navbar-right">
-                        <li class = "active"><a href="profile.ejs">Games</a></li>
+
+
+                        <li class = "active"><a href="profile.ejs">Games</a>
+                                   
+
+                                   <ul id="ul1">                                                 
+                                                 <li><hr><a href="">GAME 1</a><hr></li>
+                                                 <li><a href=""> GAME 2</a><hr></li>
+                                                 <li><a href="">GAME 3 </a></li>
+
+
+                                   </ul>
+
+
+                        </li>
+
+
                         <li class = "active"><a href="/chat">Chat</a></li>
                         <li class = "active"><a href="/messenger">Messenger</a></li>
                         <li class = "active"><a href="/logout">Logout</a></li>

@@ -80,47 +80,50 @@ module.exports = function(app, passport) {
     
     
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
-
     app.get('/one', isLogged, function(req, res) {
-        res.render('testLogin.ejs');
+                   res.render('testLogin.ejs', {
+                messagelog: req.flash('loginMessage'),
+                messagesign: req.flash('signupMessage'),
+            condition : 'logged' // get the user out of session and pass to template, in his case the main index page for the app
+        });
     });
     
     //HANDLING LOGIN
     
-    app.post('/login', passport.authenticate('local-login', {
+    app.post('/login_one', passport.authenticate('local-login', {
         successRedirect : '/logged', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
+        failureRedirect : '/login_one', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
     
     
-        app.get('/login', function(req, res) {
+        app.get('/login_one', function(req, res) {
            res.render('testLogin.ejs', {
                 messagelog: req.flash('loginMessage'),
                 messagesign: req.flash('signupMessage'),
             condition : 'login' // get the user out of session and pass to template, in his case the main index page for the app
         });
     });
-
     //HANDLING SINGUP
-        app.post('/signup', passport.authenticate('local-signup',{
+        app.post('/signup_one', passport.authenticate('local-signup',{
         successRedirect : '/logged',
-        failureRedirect : '/signup',
+        failureRedirect : '/signup_one',
         failureFlash : true
     }));
     
-    app.get('/signup', function(req, res) {
-
+    app.get('/signup_one', function(req, res) {
            res.render('testLogin.ejs', {
                 messagelog: req.flash('loginMessage'),
                 messagesign: req.flash('signupMessage'),
-            condition : 'singup' // get the user out of session and pass to template, in his case the main index page for the app
+            condition : 'signup' // get the user out of session and pass to template, in his case the main index page for the app
         });
         
         
     });
     
-    
+    app.get('/logged',isLogged, function(req,res){
+        res.send('Logged');
+    });
     
     
 };

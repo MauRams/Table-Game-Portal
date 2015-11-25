@@ -3,21 +3,9 @@
 module.exports = function(app, passport) {
 
         //ADDING ROOT FOR PROFILE TEST LOAD
-        
-        
-        
-        
-        
-        
             app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs');
             });
-
-
-
-
-
-
 
     // =====================================
     // HOME PAGE (with login links) ========
@@ -88,15 +76,39 @@ module.exports = function(app, passport) {
     app.get('/chat', function(req,res){
         res.render('index.ejs');
     });
+
+    
+    
+    //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
+
+    app.get('/one', isLogged, function(req, res) {
+        res.render('testLogin.ejs');
+    });
+    
 };
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
-
     // if user is authenticated in the session, carry on 
     if (req.isAuthenticated())
         return next();
-
     // if they aren't redirect them to the home page
-    res.redirect('/');
+           res.render('index.ejs', {
+            conditio : req.user // get the user out of session and pass to template, in his case the main index page for the app
+        });
 }
+
+
+
+function isLogged(req, res, next){
+    // if user is authenticated in the session, carry on 
+    if (req.isAuthenticated())
+        return next();
+    // if they aren't redirect them to the home page
+           res.render('testLogin.ejs', {
+                messagelog: req.flash('loginMessage'),
+                messagesign: req.flash('signupMessage'),
+            condition : 'login' // get the user out of session and pass to template, in his case the main index page for the app
+        });
+}
+

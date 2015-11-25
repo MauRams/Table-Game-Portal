@@ -9,63 +9,45 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     
-   
+    <style>
+        body        { padding-top:80px; }
+    </style>
+    
+    
     
         <!-- we need JQUERY to do JQUERY tricks -->
     <script src="jquery-1.11.3.js" type="text/javascript"></script>
     
     <script>
-    $(document).ready(function(){
-        $('li').hover(function(){
-   
-        $(this).find('ul>li').fadeToggle(1000); 
-        });
-    });
-    
+        // A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
     </script>
+    
+    
 </head>
 <body>
 <div class="container" id="mainContain">
     <div class = "navbar-brand">
         <a href="/index.ejs">Table Game Portal</a>
     </div>
-    <!-- static navbar -->
-        <div class  ="nav navbar-right static">
+        <div class  ="nav navbar-right">
             <div class = "collapse navbar-collapse navHeadCollapse">
-                    <!-- for later mobile mini menu to collapse, need to research the syntax again on this -->
+                    <!-- for later mobile mini menu to collapse -->
                     <ul class = "nav navbar-nav navbar-right">
-
-
-                        <li class = "active"><a href="profile.ejs">Games</a>
-                                   
-
-                                   <ul id="ul1">                                                 
-                                                 <li><hr><a href="">GAME 1</a><hr></li>
-                                                 <li><a href=""> GAME 2</a><hr></li>
-                                                 <li><a href="">GAME 3 </a></li>
-
-
-                                   </ul>
-
-
-                        </li>
-
-
+                        <li class = "active"><a href="profile.ejs">Games</a></li>
                         <li class = "active"><a href="/chat">Chat</a></li>
                         <li class = "active"><a href="/messenger">Messenger</a></li>
                         <li class = "active"><a href="/logout">Logout</a></li>
                     </ul>
             </div>
         </div>
-    </div>
     <div class="container" id="gameArea">
-            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
-            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
-            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
-            <h1>This is the main area for games, we can maybe use the canvas feature of HTML5?</h1>
-<!-- rearranged the order of the divs to keep the navbar in a seperate static div -->
+            
+
     </div>
-    <div class ="container" id="chatWindow">
+    <div class ="container">
         <!--fill div with content from profile.ejs, what am I doing wrong?:Maurice:-->
         <!--static content is not handled and i'm not sure about JS code as well AND there is no such root as - /views/profile.ejs IN routers.js:
         JQUERY libary was not linked as well-->
@@ -84,11 +66,12 @@
         <button type="button" onclick="javascript:fillDiv()">Fill Div</button>
         <script>
             function fillDiv(){
-                $('#chatWindow').load('/profile');
+                $('#gameArea').load('/profile');
             }
             
         </script>
         
     </div>
+</div>
 </body>
 </html>

@@ -3,26 +3,25 @@
 module.exports = function(app, passport) {
 
         //ADDING ROOT FOR PROFILE TEST LOAD
-            app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs');
+        app.get('/profile', isLoggedIn, function(req, res) {
+            res.render('profile.ejs');
             });
 
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-         res.render('login.ejs', { message: req.flash('loginMessage') }); 
-    });
+        res.render('login.ejs', { message: req.flash('loginMessage') }); 
+        });
 
     // =====================================
     // LOGIN ===============================
     // =====================================
     // show the login form
     app.get('/login', function(req, res) {
-
         // render the page and pass in any flash data if it exists
         res.render('login.ejs', { message: req.flash('loginMessage') }); 
-    });
+        });
 
     // process the login form
     // app.post('/login', do all our passport stuff here);
@@ -77,7 +76,10 @@ module.exports = function(app, passport) {
         res.render('index.ejs');
     });
 
-    
+    // get the xml sheet for the rss feed
+    app.get('/rss/rss.xml', function(req, res, next){
+        res.render('rss.xml')
+    })
     
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
     app.get('/one', isLogged, function(req, res) {

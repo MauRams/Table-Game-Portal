@@ -28,23 +28,29 @@ $( document ).ready(function() {
     
 </head>
 <body>
+
+    <!-- FIXED the containers here -->
+
 <div class="container" id="mainContain">
-    <div class = "navbar-brand">
-        <a href="/index.ejs">Table Game Portal</a>
-    </div>
-        <div class  ="nav navbar-right">
+    <div class = "navbar-static-top navbar-inverse">
+        <div class  ="container">
+            <div class = "navbar-brand"
+                 <a href="/index.ejs">Table Game Portal</a>
+            </div>
             <div class = "collapse navbar-collapse navHeadCollapse">
-                    <!-- for later mobile mini menu to collapse -->
-                    <ul class = "nav navbar-nav navbar-right">
-                        <li class = "active"><a href="profile.ejs">Games</a></li>
-                        <li class = "active"><a href="/chat">Chat</a></li>
-                        <li class = "active"><a href="/messenger">Messenger</a></li>
-                        <li class = "active"><a href="/logout">Logout</a></li>
-                    </ul>
+                <!-- for later mobile mini menu to collapse -->
+                <ul class = "nav navbar-nav navbar-right">
+                    <li class = "active"><a href="profile.ejs">Games</a></li>
+                    <li class = "active"><a href="/chat">Chat</a></li>
+                    <li class = "active"><a href="/messenger">Messenger</a></li>
+                    <li class = "active"><a href="/blog-post.js">RSS Feed</a></li>
+                    <li class = "active"><a href="/logout">Logout</a></li>
+
+                </ul>
             </div>
         </div>
-    <div class="container" id="gameArea">
-            
+    </div>
+    <div class="container" id="gameArea"> 
 
     </div>
     <div class ="container">
@@ -70,7 +76,7 @@ $( document ).ready(function() {
             }
             
         </script>
-        
+
     </div>
 </div>
 </body>

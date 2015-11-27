@@ -75,12 +75,12 @@ module.exports = function(app, passport) {
     app.get('/chat', function(req,res){
         res.render('index.ejs');
     });
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // get the xml sheet for the rss feed
     app.get('/rss/rss.xml', function(req, res, next){
         res.render('rss.xml')
-    })
-    
+    });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
     app.get('/one', isLogged, function(req, res) {
                    res.render('testLogin.ejs', {

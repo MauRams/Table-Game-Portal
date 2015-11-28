@@ -20,6 +20,14 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	});
 //MAIN CENTER DIV LOADS
+    			//RETURNS cardGame1
+
+	app.get('/card_game1', isLogged, function(req, res) {
+
+		res.render('cardGame1.ejs', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
     app.get('/game-list', isLogged, function(req, res){
         res.render('Game-list.ejs');
     });

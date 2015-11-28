@@ -1,0 +1,35 @@
+
+
+<div class="row">
+
+
+        <div class="col-xs-4">
+           <div class="row">
+                <div class="col-xs-4">image1</div>
+                <div class="col-xs-8"> text1</div>
+                
+            </div>
+        </div>
+        
+        <div class="col-xs-4">
+           <div class="row">
+                <div class="col-xs-4">image1</div>
+                <div class="col-xs-8"> text1</div>
+                
+            </div>
+        </div>
+        
+        <div class="col-xs-4">
+           <div class="row">
+                <div class="col-xs-4">image1</div>
+                <div class="col-xs-8"> text1</div>
+                
+            </div>
+        </div>
+        
+        
+        
+       
+    </div>
+    
+   

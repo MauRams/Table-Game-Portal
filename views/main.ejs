@@ -1,38 +1,3 @@
-<!-- //login code was referenced from
-//https://scotch.io/tutorials/easy-node-authentication-setup-and-local -->
-<DOCTYPE html>
-<html>
-
- <head>
-     
-           <title> Game</title>
-           <meta name="viewport" content="width=device-width, initial-scale=1">
-           <link rel="stylesheet" href="css/bootstrap.min.css"/>
-           <link rel="stylesheet" href="css/style.css"/>
-
-   <script>
-     
-                             $(document).ready(function(){
-                               
-                               $.getJSON('/get/json',function(result){
-                                 
-                                 $.each(result,function(i,field){
-                                   
-                                   $('#data').html(field+' ');
-                                   
-                                 });
-                                 
-                               });
-                               
-                             });
-   </script>
-
-
-
-</head>
-
-<body>
-
 <div class="navbar-static-top navbar-inverse " id="top" >
 
     
@@ -149,11 +114,3 @@
            </div>
     
     </div>
-            
-          
-             
- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
- <script src="js/bootstrap.js"></script>
-</body>
-
-</html>

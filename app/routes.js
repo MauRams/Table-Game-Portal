@@ -30,7 +30,8 @@ module.exports = function(app, passport) {
     //gets form from views
     app.get('/form' , isLogged, function(req, res){
         res.render('form.ejs');
-    })
+    });
+    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT

@@ -1,9 +1,4 @@
-<!-- //login code was referenced from
-//https://scotch.io/tutorials/easy-node-authentication-setup-and-local -->
-<DOCTYPE html>
-<html>
 
- <head>
            <title> Game</title>
            <meta name="viewport" content="width=device-width, initial-scale=1">
            <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -11,12 +6,54 @@
            
            
            <link href="style.css" rel="stylesheet" type="text/css" />
-            <link href="style_mod.css" rel="stylesheet" type="text/css" />
+            <link href="style_mod.css" rel="stylesheet" type="text/css"/>
+            
+            <script src="jquery-1.11.3.js"></script>
+            <script src="js/bootstrap.js"></script>
            
            
-</head>
+<script>
+//changeLayers
+var helper = 'second';
+var layerChange =function(url){
+    //login_form, singup_form
+    if(helper == 'second'){
+    	    $.ajax({url: url, success: function(result){
+        $("#mainGame").html(result);
+   		 }});
 
-<body>
+
+      $("#mainProfile").slideToggle("slow");
+      setTimeout(function(){
+      $("#mainGame").slideToggle("slow");
+      }, 1000);
+      helper = 'first';
+    }
+    else{
+
+
+    	$.ajax({url: url, success: function(result){
+        $("#mainProfile").html(result);
+    	}});
+      $("#mainGame").slideToggle("slow");
+      setTimeout(function(){
+      $("#mainProfile").slideToggle("slow");
+      }, 1000);
+      helper = 'second';
+    }
+    
+};
+
+//fill necesarry fields in the app::
+function simpleAjax(url,div){
+        	    $.ajax({url: url, success: function(result){
+        $("#"+div).html(result);
+   		 }});
+};
+
+</script>
+
+
 
 <div class="navbar-static-top navbar-inverse " id="top" >
                 <div class="container " style="min-height:70px">
@@ -24,18 +61,15 @@
                          <a href="http://www.google.com" 
                          style="color:white;font-weight:bold;font-size:25px">Home</a>
                      </div>
-                     
-                     
                      <button class="navbar-toggle" data-toggle="collapse" data-target=".navheaderCollapse" style="color:white;border-color:white">
-                     
                      Menu
                      </button>
-                     
+
                                      <div class="collapse navbar-collapse navheaderCollapse">
                                      
                                         <ul class="nav navbar-nav navbar-right">
                                         
-                                             <li><a href="#" style="color:white; font-size:18px">Games</a></li>
+                                             <li><a href="javascript:layerChange('/game_list')" style="color:white; font-size:18px">Games</a></li>
                                              <li><a href="#" style="color:white;font-size:18px">Chat</a></li>
                                              <li><a href="#portfolio" style="color:white;font-size:18px">Messages</a></li>
                                              <li><a href="/rss" style="color:white;font-size:18px">RSS Feed</a></li>
@@ -57,54 +91,67 @@
 					<!-- Side NavBar Starting -->
 				<div class="col-md-2">
 <h3>COL MD2</h3>
+<p>It is a long established fact that a reader will be distracted by the readable 
+content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+content here', making it look like readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their default model text, and a search for 
+'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
+sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 					<!-- Side NavBar Finishing -->
 					<!-- main info -->
 	<div id='mainGame'class="col-md-7">
 <h3>22MAIN PAGE HERE22</h3>
-<p>adsdashsaduihdwuighdwaiuawdigdawiugdwaiudwag
-waduigdiu gdawuig uiwagdiu dawgiu wdgwaui gawdu igawd iugd waiugawd iudw ag</p>
+<p>It is a long established fact that a reader will be distracted by the readable 
+content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+content here', making it look like readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their default model text, and a search for 
+'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
+sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 
 				<!-- otherWindow -->
 		<div id='mainProfile' class="col-md-7">
 <h3>11MAIN PAGE HERE11</h3>
-<p>adsdash saduihdwuighdwa iuawdigdaw iugdwaiudwag
-waduigdiu gdawuig uiwagdiu dawgiu wdgwaui gawdu igawd iugd waiugawd iudw ag</p>
+<p>It is a long established fact that a reader will be distracted by the readable 
+content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+content here', making it look like readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their default model text, and a search for 
+'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
+sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 
 				<div class="col-md-3 clear right">
 
 <h3>Thats for list</h3>
-<p>adsdashsadui hdwuighdwaiuawdigd awiugdwaiudwag
-waduigdiu gdawuig uiwagdiu dawgiu wdgwaui gawdu igawd iugd waiugawd iudw ag</p>
+<p>It is a long established fact that a reader will be distracted by the readable 
+content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+content here', making it look like readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their default model text, and a search for 
+'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
+sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 </div>
 
 	<div class="col-md-3 clear right">
 <h3>Thats for CHAT</h3>
-<p>adsdashsaduihdwuighdwaiuawdigdawiugdwaiudwag
-waduigdiu gdawuig uiwagdiu dawgiu wdgwaui gawdu igawd iugd waiugawd iudw ag</p>
+<p>It is a long established fact that a reader will be distracted by the readable 
+content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+content here', making it look like readable English. Many desktop publishing packages
+and web page editors now use Lorem Ipsum as their default model text, and a search for 
+'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
+sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 	</div>
 
 	</div>
-
-
-
-
     <footer class="text-center">
 	NCI Team 2015 &copy;
 <br/>
 </footer>
 
-    
-
-            
-          
-             
- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
- <script src="js/bootstrap.js"></script>
-</body>
-
-</html>

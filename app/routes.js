@@ -17,7 +17,12 @@ module.exports = function(app, passport) {
 		req.logout();
 		res.redirect('/');
 	});
-    
+//MAIN CENTER DIV LOADS
+    app.get('/game-list', isLogged, function(req, res){
+        res.render('Game-list.ejs');
+    });
+
+
     
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT

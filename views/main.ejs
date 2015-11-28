@@ -41,18 +41,13 @@ var layerChange =function(url){
     }
     
 };
-
 //fill necesarry fields in the app::
 function simpleAjax(url,div){
         	    $.ajax({url: url, success: function(result){
         $("#"+div).html(result);
    		 }});
 };
-
 </script>
-
-
-
 <div class="navbar-static-top navbar-inverse " id="top" >
                 <div class="container " style="min-height:70px">
                      <div class="navbar-brand ">
@@ -81,7 +76,7 @@ function simpleAjax(url,div){
 <br/>
 <div class="container">
 					<!-- Side NavBar Starting -->
-				<div class="col-md-2">
+				<div class="col-md-2 main_window">
 <h3>COL MD2</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -93,7 +88,7 @@ sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 					<!-- Side NavBar Finishing -->
 					<!-- main info -->
-	<div id='mainGame'class="col-md-7">
+	<div id='mainGame'class="col-md-7 main_window">
 <h3>22MAIN PAGE HERE22</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -105,7 +100,7 @@ sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 
 				<!-- otherWindow -->
-		<div id='mainProfile' class="col-md-7">
+		<div id='mainProfile' class="col-md-7 main_window">
 <h3>11MAIN PAGE HERE11</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -116,7 +111,7 @@ and web page editors now use Lorem Ipsum as their default model text, and a sear
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
 
-				<div class="col-md-3 clear right">
+				<div class="col-md-3 clear right main_window">
 
 <h3>Thats for list</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
@@ -128,8 +123,8 @@ and web page editors now use Lorem Ipsum as their default model text, and a sear
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 </div>
-
-	<div class="col-md-3 clear right">
+ 
+	<div class="col-md-3 clear right main_window">
 <h3>Thats for CHAT</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it

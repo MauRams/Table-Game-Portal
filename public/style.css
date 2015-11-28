@@ -1,4 +1,15 @@
-
+.main_window{
+	 background-image: url("img/chat_background.jpg");
+    background-color: #cccccc;
+    border-radius:10px;
+    border:1px solid #FC9D9A;
+    
+    -webkit-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+    
+    
+}
 .custom_block{
 	width:88%;
 	border:1px solid black;

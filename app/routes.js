@@ -21,7 +21,15 @@ module.exports = function(app, passport) {
     app.get('/game-list', isLogged, function(req, res){
         res.render('Game-list.ejs');
     });
-
+    //gets chat div from views
+    app.get('/chat', isLogged, function(req, res){
+        res.render('chat.ejs');
+    });
+    
+    //gets form from views
+    app.get('/form' , isLogged, function(req, res){
+        res.render('form.ejs');
+    })
 
     
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    

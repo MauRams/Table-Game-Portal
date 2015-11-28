@@ -63,6 +63,23 @@ module.exports = function(passport) {
                 // set the user's local credentials
                 newUser.local.email    = email;
                 newUser.local.password = newUser.generateHash(password);
+                
+                  //Just adding code to generate new XML file for our messages
+                     
+                var name = email,
+                    fs = require('fs'),
+                    paths = './xmlStorage/'+name+'.xml',
+                    newFile = '<?xml version="1.0" encoding="UTF-8"?><messages></messages>';
+                    
+                    fs.writeFile(paths, newFile, function(err){
+
+                    if(err) {
+                            return console.log(err);
+                    }
+   
+                    }); 
+            
+            
 
                 // save the user
                 newUser.save(function(err) {

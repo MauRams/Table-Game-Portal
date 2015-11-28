@@ -1,7 +1,7 @@
 //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
-    // get all the tools we need
+    // all of the dependencies that we need for the project
     var express  = require('express');
     var app      = express();
     var port     = process.env.PORT || 3000;

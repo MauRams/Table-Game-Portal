@@ -3,8 +3,8 @@
 module.exports = function(app, passport) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // get the xml sheet for the rss feed
-    app.get('/rss/rss.xml', function(req, res, next){
-        res.render('rss.xml')
+    app.get('/rss', isLogged, function(req, res){
+        res.render('rss.ejs');
     });
         app.get('/', isLogged, function(req, res, next){
         res.render('main.ejs');

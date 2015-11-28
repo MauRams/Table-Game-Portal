@@ -1,0 +1,22 @@
+
+.custom_block{
+	width:88%;
+	border:1px solid black;
+	margin-top:15px;
+}
+.custom_list{
+	margin-left:0px;
+	padding-left:0px;
+	margin-right:0px;
+}
+.centerp{
+	width:95%;
+	padding:8px;
+	border:1px solid black;
+	margin-bottom:20px;
+	background-color:#FAFAFA;
+		border-radius:15px;
+}
+.clear{
+	clear:right;
+}

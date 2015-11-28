@@ -12,20 +12,19 @@
 //GETTINV VALUE FROM TEMPLATING ENGINE
 var condition = <%- JSON.stringify(condition) %>;
 console.log(condition);
-
 //ON DOCUMENT READY
 $( document ).ready(function() {
     if(condition==='login'){
-        $('#signup_form').css('display','none')
+         $('#login_form').css('display','initial');
     }
     else if(condition==='signup'){
-        $('#login_form').css('display','none')
+       
+         $('#signup_form').css('display','initial');
     }
     else if(condition==='logged'){
-        $('#login_form').css('display','none')
-         $('#signup_form').css('display','none')
+        $('#login_form').css('display','initial')
+         $('#signup_form').css('display','initial')
     }
-    
     //LOGIN BUTTON POST FUNCTION
 $("#login").click(function(){
     console.log('working');
@@ -61,6 +60,15 @@ function fillAjax(url,id){
     
 };
     </script>
+    <style>
+    #signup_form{
+        display:none;
+    }
+        #login_form{
+        display:none;
+    }
+    
+    </style>
 </head>
 <body>
 <div id='main'>    

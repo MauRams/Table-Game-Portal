@@ -22,16 +22,14 @@ module.exports = function(app, passport) {
         res.render('Game-list.ejs');
     });
     //gets chat div from views
-    app.get('/chat', isLogged, function(req, res){
-        res.render('chat.ejs');
+    app.get('/messages', isLogged, function(req, res){
+        res.render('messages.ejs');
     });
-    
     //gets form from views
     app.get('/form' , isLogged, function(req, res){
         res.render('form.ejs');
     })
 
-    
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
     app.get('/one', isLogged, function(req, res) {

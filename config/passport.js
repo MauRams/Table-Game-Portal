@@ -70,7 +70,6 @@ module.exports = function(passport) {
                     fs = require('fs'),
                     paths = './xmlStorage/'+name+'.xml',
                     newFile = '<?xml version="1.0" encoding="UTF-8"?><messages></messages>';
-                    
                     fs.writeFile(paths, newFile, function(err){
 
                     if(err) {

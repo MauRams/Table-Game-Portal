@@ -1,3 +1,36 @@
+<!-- //login code was referenced from
+//https://scotch.io/tutorials/easy-node-authentication-setup-and-local -->
+<DOCTYPE html>
+<html>
+
+ <head>
+           <title> Game</title>
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" href="css/bootstrap.min.css"/>
+           <link rel="stylesheet" href="css/style-arezki.css"/>
+   <script>
+     
+                             $(document).ready(function(){
+                               
+                               $.getJSON('/get/json',function(result){
+                                 
+                                 $.each(result,function(i,field){
+                                   
+                                   $('#data').html(field+' ');
+                                   
+                                 });
+                                 
+                               });
+                               
+                             });
+   </script>
+
+
+
+</head>
+
+<body>
+
 <div class="navbar-static-top navbar-inverse " id="top" >
 
     
@@ -88,13 +121,25 @@
 
                    <h2 class="text-center"> GAME 1</h2>
                    <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+
                </div>
+            
                <div class="col-md-6">
+               
                   <img src="/img/game3.jpg" class=" img-circle img-responsive" alt="Circular holding image"/>
+               
                </div>
                
+               
+            
             </div>
+    
+    
+    
     </div>
+
+
+
     <div class="alt2">
     
             <div class="container" >
@@ -103,3 +148,11 @@
            </div>
     
     </div>
+            
+          
+             
+ <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

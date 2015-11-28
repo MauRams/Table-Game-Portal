@@ -8,18 +8,19 @@
 }
 
 </style>
-<script>
-    $(document).ready(function(){
-        function formClick(){
-        $('#sent').click
-        },
-    });
-</script>
+
     <div id ="mainChat">
         <!--button for received messages-->
         <br/>
         <button class = "btn btn-primary" id = "receive">Inbox</button>
         <!--button for sent messages-->
-        <button class = "btn btn-primary" id = "sent" onclick = "formClick()">Sent</button>
-        
+        <button class = "btn btn-primary" id = "sent">Sent</button>
+        <!--form for sending messages back and forth-->
+        <form role = "form">
+        New Message:<br>
+        <input class = "form-control" type="text" name="Message">
+        <br/>
+        <br/>
+        <button class = "btn btn-primary" id = "submit">Submit</button>
+    </form>
     </div>

@@ -89,6 +89,12 @@ module.exports = function(app, passport) {
             condition : 'logged' // get the user out of session and pass to template, in his case the main index page for the app
         });
     });
+    //Main
+    
+    app.get('/main', function(req,res){
+  res.render('main.ejs');
+});
+
     
     //HANDLING LOGIN
     

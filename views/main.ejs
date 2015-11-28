@@ -1,0 +1,159 @@
+<!-- //login code was referenced from
+//https://scotch.io/tutorials/easy-node-authentication-setup-and-local -->
+<DOCTYPE html>
+<html>
+
+ <head>
+     
+           <title> Game</title>
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" href="css/bootstrap.min.css"/>
+           <link rel="stylesheet" href="css/style.css"/>
+
+   <script>
+     
+                             $(document).ready(function(){
+                               
+                               $.getJSON('/get/json',function(result){
+                                 
+                                 $.each(result,function(i,field){
+                                   
+                                   $('#data').html(field+' ');
+                                   
+                                 });
+                                 
+                               });
+                               
+                             });
+   </script>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar-static-top navbar-inverse " id="top" >
+
+    
+            
+                <div class="container " style="min-height:70px">
+                     
+                     <div class="navbar-brand ">
+
+
+                         <a href="http://www.google.com" 
+                         style="color:white;font-weight:bold;font-size:25px">Home</a>
+                     </div>
+                     
+                     
+                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navheaderCollapse" style="color:white;border-color:white">
+                     
+                     Menu
+                     </button>
+                     
+                                     <div class="collapse navbar-collapse navheaderCollapse">
+                                     
+                                        <ul class="nav navbar-nav navbar-right">
+                                        
+                                             <li><a href="#" style="color:white; font-size:18px">Games</a></li>
+                                             <li><a href="#" style="color:white;font-size:18px">Chat</a></li>
+                                             <li><a href="#portfolio" style="color:white;font-size:18px">Messages</a></li>
+                                             <li><a href="/logout" style="color:white;font-size:18px">Logout</a></li>
+                                        
+                                        
+                                        </ul>
+                                         
+                                     </div>
+                
+                </div>
+            
+</div>
+<br/>
+
+
+
+<div class="container" style="background-image:url("img/image1.png")">
+    
+            <div class="row padding">
+                 <div class="col-md-6">
+               
+                         <h2 class="text-center"> GAME 3</h2>
+                         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                       
+                </div>
+            
+               <div class="col-md-6">
+               
+                        <img src="img/game1.jpg" class=" img-circle img-responsive" alt="Circular holding image"/>
+               
+               </div>
+               
+              
+            
+            
+            </div>
+            <hr/>
+            
+            <div class="row padding" id="two">
+            
+                <div class="col-md-6">
+
+                <h2 class="text-center"> GAME 2</h2>
+                 
+                 <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+               </div>
+            
+               <div class="col-md-6">
+               
+                <img src="img/game2.jpg" class=" img-circle img-responsive" alt="Circular holding image"/>
+               
+               </div>
+               
+               
+            
+            
+            </div>
+            <hr/>
+            
+            <div class="row padding">
+
+                 <div class="col-md-6">
+
+                   <h2 class="text-center"> GAME 1</h2>
+                   <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+
+               </div>
+            
+               <div class="col-md-6">
+               
+                  <img src="/img/game3.jpg" class=" img-circle img-responsive" alt="Circular holding image"/>
+               
+               </div>
+               
+               
+            
+            </div>
+    
+    
+    
+    </div>
+
+
+
+    <div class="alt2">
+    
+            <div class="container" >
+            
+            <footer>&copy; The Sympsons<br/><a href="#top"> Back to top</a></footer>
+           </div>
+    
+    </div>
+            
+          
+             
+ <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

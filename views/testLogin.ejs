@@ -34,7 +34,7 @@ $("#login").click(function(){
         password: $('#login_password').val()
     },
     function(data, status){
-       $("#main").html(data);
+       $("#mainContainer").html(data);
     });
 });
 
@@ -47,7 +47,7 @@ $("#signup").click(function(){
         password: $('#signup_password').val()
     },
     function(data, status){
-        $("#main").html(data);
+        $("#mainContainer").html(data);
     });
 });
     
@@ -71,7 +71,7 @@ function fillAjax(url,id){
     </style>
 </head>
 <body>
-<div id='main'>    
+<div id='mainContainer'>    
 <div id='login_form' class="col-sm-6 col-sm-offset-3">
     <h1><span class="fa fa-sign-in"></span> ~Login~</h1>
     <!-- show any messages that come back with authentication -->
@@ -90,7 +90,7 @@ function fillAjax(url,id){
         </div>
         <button id='login'class="btn btn-warning btn-lg">Login</button>
     <hr>
-    <p>Need an account? <a href="javascript:fillAjax('/signup_one','main')">Signup</a></p>
+    <p>Need an account? <a href="javascript:fillAjax('/signup_one','mainContainer')">Signup</a></p>
 
 </div>
 
@@ -112,7 +112,7 @@ function fillAjax(url,id){
         </div>
         <button id='signup' class="btn btn-warning btn-lg">Signup</button>
     <hr>
-    <p>Already have an account? <a href="javascript:fillAjax('/login_one','main')">Login</a></p>
+    <p>Already have an account? <a href="javascript:fillAjax('/login_one','mainContainer')">Login</a></p>
 </div>
 
 

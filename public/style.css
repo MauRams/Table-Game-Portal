@@ -1,14 +1,14 @@
 .main_window{
-	 background-image: url("img/chat_background.jpg");
-    background-color: #cccccc;
+	 background-image: url("img/seamless-dark-texture-with-small-grid.jpg");
+    background-color: #50686A;
     border-radius:10px;
-    border:1px solid #FC9D9A;
+    border:2px solid #50686A;
+    color:snow;
+    margin-bottom:10px;
     
     -webkit-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
 -moz-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
 box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
-    
-    
 }
 .custom_block{
 	width:88%;
@@ -30,4 +30,16 @@ box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
 }
 .clear{
 	clear:right;
+}
+
+/*THIS ALL GOES TOWARDS AJAX ROTATING ICON*/
+ body { border:0px;background-image:url('img/background_linen.png') }/*main body background*/
+ .banner_text{
+ 	color:white;
+   margin-top: 20%; 
+   margin-left:5%;
+   width: 100%;
+ }
+#image_banner{
+
 }

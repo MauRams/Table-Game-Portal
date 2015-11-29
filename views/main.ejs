@@ -1,5 +1,3 @@
-
-           <title> Game</title>
            <meta name="viewport" content="width=device-width, initial-scale=1">
            <link rel="stylesheet" href="css/bootstrap.min.css"/>
            <link rel="stylesheet" href="css/style-arezki.css"/>
@@ -52,8 +50,65 @@ function simpleAjax(url,div){
    		 }});
 };
 </script>
+<script>
+//RUNNING TEXT SCRIPT
+//Code snippet from: http://jsfiddle.net/ARTsinn/RED9H/2/
+$( document ).ready(function() {
+$.fn.typer = function (text, options) {
+    options = $.extend({}, {
+        delay: 1000,
+        duration: 5000,
+        easing: 'linear',
+        endless: false
+    }, options);
+    var elem = $(this);
+    (function loop(i) {
+        var e = typeof text === 'string' ? text : text[i];
+        // strip html tags, might be helpful
+        // e.replace(/(<.*?>)/ig,"")
+        $({len: 0}).delay(options.delay).animate({len: e.length}, {
+            duration: options.duration,
+            easing: options.easing,
+            step: function (now) {
+                var pos = Math.ceil(now),
+                    char = e.substr(pos, 0);
+                elem.html(e.substr(0, pos));
+            },
+            complete: function () {
+                i++;
+                if (i === text.length && !options.endless) {
+                    return;
+                } else if (i === text.length) {
+                    i = 0;
+                }
+                loop(i);
+            }
+        });
+    })(0);
+};
+
+$('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site</>!']);
+setInterval(function(){ $('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site</>!']); }, 12000);
+
+});
+</script>
+<!--Code snippet from: http://stackoverflow.com/questions/22122111/how-to-display-text-over-an-image-in-bootstrap-3-1-->
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="item active">
+        <img src="img/banner2.jpg" alt="" class="img-responsive">
+           <div class="carousel-caption">
+           <h1 class='1banner_text'><span id='bannerText'></span></h1>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
 <div class="navbar-static-top navbar-inverse " id="top" >
-                <div class="container " style="min-height:70px">
+                <div class="container " style="min-height:50px">
                      <div class="navbar-brand ">
                          <a href="/logged" 
                          style="color:white;font-weight:bold;font-size:25px">Home</a>
@@ -78,8 +133,9 @@ function simpleAjax(url,div){
 </div>
 <br/>
 <div class="container">
-					<!-- Side NavBar Starting -->
-				<div class="col-md-2 main_window">
+
+				<div class="col-md-2">
+				    <div class=' main_window'>
 <h3>COL MD2</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -89,10 +145,15 @@ and web page editors now use Lorem Ipsum as their default model text, and a sear
 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 	</div>
-					<!-- Side NavBar Finishing -->
-					<!-- main info -->
-	<div id='mainGame'class="col-md-7 main_window">
-<h3>22MAIN PAGE HERE22</h3>
+    
+    </div>
+    
+	<div id='mainGame'class="col-md-7">
+	    
+ <div class=' main_window'>
+
+	    <div class="loading"></div>
+
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
 has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -100,11 +161,17 @@ content here', making it look like readable English. Many desktop publishing pac
 and web page editors now use Lorem Ipsum as their default model text, and a search for 
 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+<!--AJAX LOADING ICON-->
+
+	</div>
 	</div>
 
 				<!-- otherWindow -->
-		<div id='mainProfile' class="col-md-7 main_window">
-<h3>11MAIN PAGE HERE11</h3>
+		<div id='mainProfile' class="col-md-7">
+		     <div class=' main_window'>
+		    <div class="loading"></div>
+<h3>Welcome!</h3>
+<img src="img/play.jpg"style='width:30%; float:right' class=" img-circle img-responsive" alt="Circular holding image"/>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
 has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -112,10 +179,12 @@ content here', making it look like readable English. Many desktop publishing pac
 and web page editors now use Lorem Ipsum as their default model text, and a search for 
 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+<!--AJAX LOADING ICON-->
+
 	</div>
-
-				<div class="col-md-3 clear right main_window">
-
+</div>
+				<div class="col-md-3 clear right">
+ <div class=' main_window'>
 <h3>Thats for list</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -124,10 +193,11 @@ content here', making it look like readable English. Many desktop publishing pac
 and web page editors now use Lorem Ipsum as their default model text, and a search for 
 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-
+</div>
 </div>
  
-	<div class="col-md-3 clear right main_window">
+	<div class="col-md-3 clear right">
+	     <div class=' main_window'>
 <h3>Thats for CHAT</h3>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -138,7 +208,7 @@ and web page editors now use Lorem Ipsum as their default model text, and a sear
 sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 	</div>
-
+        </div>
 	</div>
     <footer class="text-center">
 	NCI Team 2015 &copy;

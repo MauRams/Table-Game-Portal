@@ -1,8 +1,4 @@
 body{
-
-	background-image:url("../img/image1.png");
-
-	
     border-left: 15px solid #eee;
     border-right: 15px solid #eee;  
     border-top: 40px solid #eee;
@@ -16,10 +12,6 @@ body{
 	color:#fff;
 	text-align:center;
 }
-
-//http://subtlepatterns.com
-//https://www.google.ie/search?q=number1,2,3&espv=2&biw=1366&bih=599&source=lnms&tbm=isch&sa=X&ved=0ahUKEwje6cDxnrHJAhUHthQKHeNFCJgQ_AUIBygB#tbm=isch&q=number+3&imgrc=3MZZnLhkUtFu7M%3A
-
 .padding{
 	
 	

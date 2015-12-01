@@ -164,6 +164,7 @@ document.getElementById('chatMessage').value = '';
 };
 
 socket.on('chatIncomingMessage',function(msg){
+    console.log('incoming message');
 	addMessage(msg);
 });
 

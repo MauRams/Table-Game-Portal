@@ -2,16 +2,15 @@
 
 var feed  = new feed({
     
-    title: 'My Feed Title',
-    description: 'Description here',
-    link: 'URL here',
-    image: 'URL here',
-    copyright: 'Cpoyright message here',
+    Name: 'My Feed Title',
+    Email: 'email here',
+    Game: 'info here',
+    HiScore: 'info here',
     
-    author: {
-        name: 'John Doe',
-        email: 'john@email.com',
-        link: 'URL'
-    }
+    // author: {
+    //     name: 'John Doe',
+    //     email: 'john@email.com',
+    //     link: 'URL'
+    // }
     
 });

@@ -8,6 +8,7 @@ module.exports = function(app, passport) {
     app.get('/rss', isLogged, function(req, res){
         res.render('rss.ejs');
     });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     var xslt_transform = require('..engine/xslt_transform.js');//script to apply transformations to the xml file
     		//XSLT return to the user ON REQUEST
 	app.get('/rss/highScore', isLogged, function(req, res) {
@@ -15,6 +16,7 @@ module.exports = function(app, passport) {
 	var transform = './rss/highScore.xsl';
 	res.send(xslt_transform(transform,paths));
     });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         app.get('/', isLogged, function(req, res, next){
         res.render('main.ejs');
     });

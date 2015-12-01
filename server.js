@@ -8,6 +8,7 @@
     var mongoose = require('mongoose');
     var passport = require('passport');
     var flash    = require('connect-flash');
+    var feed     = require('feed');//required for rss feed
     
     var morgan       = require('morgan');
     var cookieParser = require('cookie-parser');

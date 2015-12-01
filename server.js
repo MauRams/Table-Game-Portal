@@ -15,6 +15,7 @@
     var session      = require('express-session');
     
     var configDB = require('./config/database.js');
+    var xslt = require('node_xslt');
     
     // configuration ===============================================================
     mongoose.connect(configDB.url); // connect to our database

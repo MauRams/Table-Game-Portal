@@ -9,7 +9,9 @@ module.exports = function(app, passport) {
         res.render('rss.ejs');
     });
         app.get('/', isLogged, function(req, res, next){
-        res.render('main.ejs');
+        res.render('main.ejs',{
+			user : req.user // get the user out of session and pass to template
+		});
     });
     
     // =====================================
@@ -84,7 +86,9 @@ module.exports = function(app, passport) {
     });
     
     app.get('/logged',isLogged, function(req,res){
-        res.render('main.ejs');
+        res.render('main.ejs',{
+			user : req.user // get the user out of session and pass to template
+		});
     });
     
     

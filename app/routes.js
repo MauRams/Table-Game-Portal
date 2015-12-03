@@ -5,14 +5,12 @@
 module.exports = function(app, passport) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // get the xml sheet for the rss feed
-    app.get('/rss', isLogged, function(req, res){
-        res.render('rss.ejs');
-    });
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     var xslt_transform = require('../engine/xslt_transform.js');//script to apply transformations to the xml file
     		//XSLT return to the user ON REQUEST
-	app.get('/rss/highScore', isLogged, function(req, res) {
-	var paths = './rss/'+req.user.local.email+'.xml';
+	app.get('/rss', isLogged, function(req, res) {
+	var paths = './rss/rss.xml';
 	var transform = './rss/highScore.xsl';
 	res.send(xslt_transform(transform,paths));
     });

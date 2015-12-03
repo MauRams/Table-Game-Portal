@@ -1,9 +1,3 @@
-	//required for transformations
-	var xslt_transform = require('../engine/xslt_transform.js'),
-	            // tryxml = require('../engine/xml_save.js'),
-	            fs = require('fs');
-
-
 
 //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local

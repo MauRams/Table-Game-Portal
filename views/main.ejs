@@ -62,7 +62,7 @@
 
                                                                                 
                                                                                       	
-     	<!-- Script for Shaking the Button-->
+     	<!-- Script for Shaking the Home-->
      	
      	
 
@@ -93,9 +93,9 @@
                  $("#shake2").hover(function(){
 
                      $(this).shake();
-                      $(this).css('background-color', 'red')
+                      $("#shake2 a").css('color', 'red')
                   }, function() {
-                      $(this).css('background-color', '')
+                      $("#shake2 a").css('color', '')
                  
 
                        });
@@ -104,7 +104,7 @@
                   
                 </script>
                                                                                                                 
-                                                  <!-- End of the Script that shakes the button -->                                                              
+                                                  <!-- End of the Script that shakes the Home -->                                                              
 
                                                                                  
                                                                                 
@@ -183,8 +183,8 @@ $.fn.typer = function (text, options) {
     })(0);
 };
 
-$('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site</>!']);
-setInterval(function(){ $('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site</>!']); }, 12000);
+$('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site </b></>!']);
+setInterval(function(){ $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']); }, 9000);
 
 });
 </script>

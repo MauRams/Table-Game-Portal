@@ -14,8 +14,7 @@
     <link href="card_game1/style_cards.css" rel="stylesheet" />
     <script src="card_game1/display.js"></script>
      	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-     	
-     	
+	
      	<!-- Script for Shaking the Button-->
      	
      	
@@ -25,7 +24,7 @@
                                   
                                     intShakes = intShakes || 10;
                                     intDistance = intDistance || 2;
-                                    intDuration = intDuration || 1000;
+                                    intDuration = intDuration || 500;
                                   
                                     this.each(function() {
                                         $(this).css("position","relative"); 
@@ -45,7 +44,6 @@
                        	$( document ).ready(function() {
                                                                    	
                  $("#shake1").hover(function(){
-
                      $(this).shake();
                       $(this).css('background-color', 'red')
                   }, function() {
@@ -387,9 +385,9 @@ sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 
 				<!-- otherWindow -->
 		<div id='mainProfile' class="col-md-7">
-		     <div class=' main_window'>
+		     <div class='main_window'>
 		    <div class="loading"></div>
-<h3>Welcome!</h3>
+<h3 >Welcome!</h3>
 <img src="img/play.jpg"style='width:30%; float:right' class=" img-circle img-responsive" alt="Circular holding image"/>
 <p>It is a long established fact that a reader will be distracted by the readable 
 content of a page when looking at its layout. The point of using Lorem Ipsum is that it
@@ -421,13 +419,6 @@ sometimes by accident, sometimes on purpose (injected humour and the like).</p>
      
      
      </div>
-     
-     
-     
-
-
-
-
 <!--<br/>-->
 
 

@@ -14,18 +14,13 @@
     <link href="card_game1/style_cards.css" rel="stylesheet" />
     <script src="card_game1/display.js"></script>
      	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	
      	<!-- Script for Shaking the Button-->
-     	
-     	
-
                                 <script type="text/javascript">
                                 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
-                                  
-                                    intShakes = intShakes || 10;
-                                    intDistance = intDistance || 2;
-                                    intDuration = intDuration || 500;
-                                  
+                                    intShakes = intShakes || 2;
+                                    intDistance = intDistance || 3;
+                                    intDuration = intDuration || 200;
+
                                     this.each(function() {
                                         $(this).css("position","relative"); 
                                         for (var x=1; x<=intShakes; x++) {
@@ -37,9 +32,7 @@
                                 return this;
                                 };
                                 </script>
-                                
-                                
-                                     	
+          	
                 	<script>
                        	$( document ).ready(function() {
                                                                    	
@@ -48,10 +41,16 @@
                       $(this).css('background-color', 'red')
                   }, function() {
                       $(this).css('background-color', '')
-                 
+                       });
+                                            	
+                 $(".shake2").hover(function(){
+
+                     $(this).shake();
+                      $("#shake2").css('background-color', 'red !important')
+                  }, function() {
+                      $("#shake2").css('background-color', '')
 
                        });
-                      
                       });
                   
                 </script>
@@ -62,45 +61,9 @@
                                                                                       	
      	<!-- Script for Shaking the Home-->
      	
-     	
 
-                                <script type="text/javascript">
-                                jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
-                                  
-                                    intShakes = intShakes || 10;
-                                    intDistance = intDistance || 2;
-                                    intDuration = intDuration || 1000;
-                                  
-                                    this.each(function() {
-                                        $(this).css("position","relative"); 
-                                        for (var x=1; x<=intShakes; x++) {
-                                        $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
-                                    .animate({left:intDistance}, ((intDuration/intShakes)/2))
-                                    .animate({left:0}, (((intDuration/intShakes)/4)));
-                                    }
-                                  });
-                                return this;
-                                };
-                                </script>
                                 
-                                
-                                     	
-                	<script>
-                       	$( document ).ready(function() {
-                                                                   	
-                 $("#shake2").hover(function(){
 
-                     $(this).shake();
-                      $("#shake2 a").css('color', 'red')
-                  }, function() {
-                      $("#shake2 a").css('color', '')
-                 
-
-                       });
-                      
-                      });
-                  
-                </script>
                                                                                                                 
                                                   <!-- End of the Script that shakes the Home -->                                                              
 
@@ -151,7 +114,7 @@ $( document ).ready(function() {
 $.fn.typer = function (text, options) {
     options = $.extend({}, {
         delay: 1000,
-        duration: 5000,
+        duration: 10000,
         easing: 'linear',
         endless: false
     }, options);
@@ -181,8 +144,8 @@ $.fn.typer = function (text, options) {
     })(0);
 };
 
-$('#bannerText').typer(['<i>Nicest</i> <u>Ever Table</u> <b>Portal Web Site </b></>!']);
-setInterval(function(){ $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']); }, 9000);
+$('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']);
+setInterval(function(){ $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']); }, 25000);
 
 });
 </script>
@@ -367,8 +330,8 @@ var addMessage = function(messageObject){
 <div class="navbar-static-top navbar-inverse " id="top" >
                 <div class="container " style="min-height:50px">
 
-                     <div id ="shake2" class="navbar-brand cancel_left_padding">
-                         <a href="/logged" 
+                     <div  class="navbar-brand cancel_left_padding">
+                         <a class ="shake2" href="/logged" 
                          style="color:white;font-weight:bold;font-size:25px;  text-decoration:none;">Home</a>
                      </div>
                 
@@ -381,10 +344,10 @@ var addMessage = function(messageObject){
                                      <div class="collapse navbar-collapse navheaderCollapse">
                                      
                                         <ul class="nav navbar-nav navbar-right">
-                                             <li><a href="javascript:layerChange('/game-list')" style="color:white; font-size:18px">Games</a></li>
-                                             <li><a href="javascript:layerChange('/messages')" style="color:white;font-size:18px">Messages</a></li>
-                                             <li><a href="javascript:layerChange('/rss')" style="color:white;font-size:18px">RSS Feed</a></li>
-                                             <li><a href="/logout" style="color:white;font-size:18px">Logout</a></li>
+                                             <li><a class ="shake2" href="javascript:layerChange('/game-list')" style="color:white; font-size:18px">Games</a></li>
+                                             <li><a class ="shake2" href="javascript:layerChange('/messages')" style="color:white;font-size:18px">Messages</a></li>
+                                             <li><a class ="shake2" href="javascript:layerChange('/rss')" style="color:white;font-size:18px">RSS Feed</a></li>
+                                             <li><a class ="shake2" href="/logout" style="color:white;font-size:18px">Logout</a></li>
                         
                                         </ul>
                                      </div>

@@ -27,10 +27,64 @@ margin: 0 auto;
 </style>
 
     
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" href="css/bootstrap.min.css"/>
+           <link rel="stylesheet" href="css/style-arezki.css"/>
+           
+           
+           <link href="style.css" rel="stylesheet" type="text/css" />
+            <link href="style_mod.css" rel="stylesheet" type="text/css"/>
+            
+            <script src="jquery-1.11.3.js"></script>
+            <script src="js/bootstrap.js"></script>
+            
         
         
+     	<!-- Script for Shaking the Button-->
+     	
+     	
+
+                                <script type="text/javascript">
+                                jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+                                  
+                                    intShakes = intShakes || 10;
+                                    intDistance = intDistance || 2;
+                                    intDuration = intDuration || 1000;
+                                  
+                                    this.each(function() {
+                                        $(this).css("position","relative"); 
+                                        for (var x=1; x<=intShakes; x++) {
+                                        $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+                                    .animate({left:intDistance}, ((intDuration/intShakes)/2))
+                                    .animate({left:0}, (((intDuration/intShakes)/4)));
+                                    }
+                                  });
+                                return this;
+                                };
+                                </script>
+                                
+                                
+                                     	
+                	<script>
+                       	$( document ).ready(function() {
+                                                                   	
+                 $("#messages").hover(function(){
+
+                     $(this).shake();
+                      $(this).css('background-color', 'red')
+                  }, function() {
+                      $(this).css('background-color', '')
+                 
+
+                       });
+                      
+                      });
+                  
+                </script>
+                                                                                                                
+                                                  <!-- End of the Script that shakes the button -->     
     
-    <div class="row" id="messages">
+    <div id="messages"  class="row" >
         
          
                     <div class="row centered ">
@@ -52,7 +106,14 @@ margin: 0 auto;
                 <form class="form-horizontal" >
                     <fieldset>
                        
-                        <legend class="text-center header">Send Message !</legend>
+                        <legend class="text-center header">
+                            
+                        <button onclick='()' class="btn btn-default" type="button">Send Message</button>
+                        <button onclick='()' class="btn btn-default" type="button">Message Sent</button>
+                        <button onclick='()' class="btn btn-default" type="button">Inbox</button>
+                            
+                            
+                       </legend>
 
                                   <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-4 control-label" >Player Name</label>

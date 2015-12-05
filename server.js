@@ -1,3 +1,4 @@
+
 //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
@@ -16,12 +17,13 @@
     
     var configDB = require('./config/database.js');
     var xslt = require('node_xslt');
+    var feeder = require('feed');//need this for RSS feed
     
     // configuration ===============================================================
     mongoose.connect(configDB.url); // connect to our database
     
     require('./config/passport')(passport); // pass passport for configuration
-
+	
     
     // set up our express application
     app.use(morgan('dev')); // log every request to the console

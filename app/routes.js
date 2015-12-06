@@ -100,16 +100,9 @@ module.exports = function(app, passport) {
 			user : req.user // get the user out of session and pass to template
 		});
     });
-    
 
-
-
-
-		
 			//XML HANDLING 
-	
 	app.post('/sendMessageToUser', function(req, res) {
-
     var message = req.body.message;
     console.log(message);
     var paths_sender = './xmlStorage/'+req.user.local.email+'.xml';
@@ -129,7 +122,6 @@ module.exports = function(app, passport) {
 		res.send('noFile');
 
 }
-
 }); 
 });
 			//XSLT return to the user ON REQUEST
@@ -150,21 +142,12 @@ module.exports = function(app, passport) {
 			//RETURNING SENDING FORM
 			
 	app.get('/sendMessage', isLogged, function(req, res) {
-		res.render('sendMessage.ejs');
+		res.render('message_shell.ejs');
 	});
 
 
  
 };
-
-
-
-
-
-
-
-
-
 
 function isLogged(req, res, next){
     // if user is authenticated in the session, carry on 

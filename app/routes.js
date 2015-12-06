@@ -1,6 +1,10 @@
 //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
+	//required to transform
+	var xslt_transform = require('../engine/xslt_transform.js'),
+	            tryxml = require('../engine/xml_save.js'),
+	            fs = require('fs');
 
 module.exports = function(app, passport) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,7 +34,6 @@ module.exports = function(app, passport) {
 	});
 //MAIN CENTER DIV LOADS
     			//RETURNS cardGame1
-
 	app.get('/card_game1', isLogged, function(req, res) {
 
 		res.render('cardGame1.ejs', {
@@ -98,8 +101,69 @@ module.exports = function(app, passport) {
 		});
     });
     
-    
+
+
+
+
+		
+			//XML HANDLING 
+	
+	app.post('/sendMessageToUser', function(req, res) {
+
+    var message = req.body.message;
+    console.log(message);
+    var paths_sender = './xmlStorage/'+req.user.local.email+'.xml';
+    var paths_reciever = './xmlStorage/'+message.user+'.xml';
+
+    console.log(paths_sender);
+    console.log(paths_reciever);
+
+        fs.exists(paths_reciever, function(exists){
+        if (exists) {
+		
+    tryxml('sent',        paths_sender,     message.to_user,            message.message);
+    tryxml('recieved',    paths_reciever,   req.user.local.email,       message.message);
+    res.send('success');
+         }
+          else{
+		res.send('noFile');
+
+}
+
+}); 
+});
+			//XSLT return to the user ON REQUEST
+		app.get('/sent', isLogged, function(req, res) {
+		var paths = './xmlStorage/'+req.user.local.email+'.xml';
+		var transform = './xsltStorage/sent.xsl';
+		res.send(xslt_transform(transform,paths));
+
+	});
+	
+			app.get('/recieved', isLogged, function(req, res) {
+		var paths = './xmlStorage/'+req.user.local.email+'.xml';
+		var transform = './xsltStorage/recieved.xsl';
+		res.send(xslt_transform(transform,paths));
+
+		
+	});
+			//RETURNING SENDING FORM
+			
+	app.get('/sendMessage', isLogged, function(req, res) {
+		res.render('sendMessage.ejs');
+	});
+
+
+ 
 };
+
+
+
+
+
+
+
+
 
 
 function isLogged(req, res, next){

@@ -16,7 +16,6 @@ margin-top:5%;
 /* Old styles*/
 
 h8{
-  margin-left:-150px;
   margin-top:30px;
 }
 .beat{
@@ -182,9 +181,6 @@ height:80px;
         margin-top: 30px;
 
 }
-.move_main{
-
-}
 .icon{
   height:70px;
   width:70px;
@@ -195,13 +191,17 @@ height:80px;
   position:absolute;
   margin-top:-20px;
 }
+
+
+
 #message_stats{
   position:relative;
-width:940px;
+width:140px;
 margin-top: 0px;
   color:#D3D3D3;
   font-size: 19px;
   display:none;
+  
 }
 #status1, #status{
   display:none;
@@ -247,6 +247,9 @@ margin-bottom:3px;
   margin-top:50px;
   color:blue;
 }
+
+
+
 .end_button{
 float:left;
 border-radius: 11px;

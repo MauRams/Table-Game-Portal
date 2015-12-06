@@ -15,7 +15,8 @@
     <link href="card_game1/style_cards.css" rel="stylesheet" />
     <script src="card_game1/display.js"></script>
      	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-     	<!-- Script for Shaking the Button-->
+     	
+     	<!-- Script for Shaking the Button THIS IS TAKEN FROM Stackowerflow.com-->
                                 <script type="text/javascript">
                                 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
                                     intShakes = intShakes || 2;
@@ -32,10 +33,8 @@
                                   });
                                 return this;
                                 };
-                                </script>
-          	
-                	<script>
-                       	$( document ).ready(function() {
+
+                                                       	$( document ).ready(function() {
                                                                    	
                  $("#shake1").hover(function(){
                      $(this).shake();
@@ -53,30 +52,19 @@
 
                        });
                       });
-                  
-                </script>
-                                                                                                                
-                                                  <!-- End of the Script that shakes the button -->                                                              
-
-                                                                                
-                                                                                      	
-     	<!-- Script for Shaking the Home-->
-     	
-
-                                
-
-                                                                                                                
-                                                  <!-- End of the Script that shakes the Home -->                                                              
-
-                                                                                 
-                                                                                
+                                </script>
+                                                                      
 <script>
 //changeLayers
 var helper = 'second';
 var layerChange =function(url){
     //login_form, singup_form
     if(helper == 'second'){
-    	    $.ajax({url: url, success: function(result){
+    	    $.ajax({url: url,
+    	    beforeSend: function() {
+    	        $("#mainGame").html('<h1>LOADING</h1>');
+        },
+    	    success: function(result){
         $("#mainGame").html(result);
    		 }});
 
@@ -103,7 +91,11 @@ var layerChange =function(url){
 };
 //fill necesarry fields in the app::
 function simpleAjax(url,div){
-        	    $.ajax({url: url, success: function(result){
+        	    $.ajax({url: url,
+        	        	    beforeSend: function() {
+    	        $("#"+div).html('<h1>LOADING</h1>');
+        },
+        	    success: function(result){
         $("#"+div).html(result);
    		 }});
 };
@@ -144,14 +136,10 @@ $.fn.typer = function (text, options) {
         });
     })(0);
 };
-
 $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']);
 setInterval(function(){ $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']); }, 25000);
-
 });
 </script>
-
-
 <!--HANDLING CHAT HERE-->
 <script>
 var socket = io.connect('/');

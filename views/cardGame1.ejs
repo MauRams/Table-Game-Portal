@@ -1,5 +1,15 @@
 
     <script src="card_game1/display.js"></script>
+    <script>
+    //ADDING USERNAME TO THE GAME
+    	$( document ).ready(function() { 
+    	   $('.card_game1_user').html(user);
+    	  
+    	  
+    	});
+     
+      
+    </script>
 
 <div class="custom_block center-block color_box">
   <div class='card_game_container center-block'>
@@ -22,6 +32,12 @@
                 <td><span>Expanations:</span></td>
                 <td><input type="checkbox" id="notify" value="true"checked></td>
               </tr>
+              <tr>
+                <td>Your user name is: </td>
+                <td><span class='card_game1_user'></span></td>
+                
+              </tr>
+              
             </table>
             </div>
       </div>
@@ -60,10 +76,10 @@
 
       <div id="div3"></div>
       </div>
-        <h8 class="textcent" id="message_stats">Status Goes Here</h8>
+        
            <div class='results'> 
       <div class="player_inf transp move_main">
-        <p id="playerN" class="textcent">---</p>
+        <p id="playerN" class="textcent"><span class='card_game1_user'></span></p>
       <p class="textcent">Wins:<span id="playerWon">0</span></p>
       </div>
       
@@ -71,13 +87,9 @@
           <p class="textcent">COMPUTER</p>
           <p class="textcent">Wins:<span id="computerWon">0</span></p>
         </div>
-      
     </div>
+    <h8 class="textcent h8" id="message_stats">Status Goes Here</h8>
     </div>
-
-
-
-
 
     <div id="endMenu" class="cent transp bradius">
       <h2 class="textcent down" id="end_info">Congratulations, You Won!</h2>
@@ -90,7 +102,7 @@
 
 
         <div class="player_inf transp end_player">
-        <h4 id="playerNn h4" class="textcent">---</h4>
+        <h4 id="playerNn h4" class="textcent"><span class='card_game1_user'></span></h4>
       <h4 class="textcent h4">Wins:<span id="end_playerWon"></span></h4>
       </div>
       

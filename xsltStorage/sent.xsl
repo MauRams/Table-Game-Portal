@@ -2,8 +2,7 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
-  <html>
-<head>
+
     <style>
       .left{
         float:left;
@@ -12,27 +11,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         border:1px solid black;
       }
     </style>
-</head>
-  <body>
-    <h2>Sent</h2>
-      <xsl:for-each select="messages/recieved">
+      <!-- Tab panes -->
+       <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                    <div class="list-group">
 
-    <div class='messageBody'>
-<h2 class='left'>To:</h2>
-<h2 class='left'><xsl:value-of select="user"/></h2>
-<br/>
-<br/>
-<br/>
-<br/>
-<h7 class='left'>Date:</h7>
-<h7 class='left'><xsl:value-of select="date"/></h7>
-<br/>
-<hr/>
-<p><xsl:value-of select="text"/></p>
-</div>
+    
+      <xsl:for-each select="messages/sent">
+        
+          <a href="#" class="list-group-item">
+          <span class="glyphicon glyphicon-star-empty"></span>
+          <span class="name" style="min-width: 120px;display: inline-block;">From: <xsl:value-of select="user"/></span>
+          <br/>
+     <span class="text-muted" style="font-size: 11px;"><xsl:value-of select="text"/></span></a>
+
       </xsl:for-each>
-  </body>
-  </html>
+      
+      
+      
+            </div>
+      </div>
+    </div>
 </xsl:template>
 </xsl:stylesheet>
 

@@ -255,7 +255,7 @@ var addMessage = function(messageObject){
 	
 	var userText = document.createTextNode(messageObject.user);
 	var par2 = document.createElement("p");
-	par2.className = 'name';
+	par2.className = 'chat_name';
     par2.appendChild(userText);
     div.appendChild(par2);
     
@@ -334,7 +334,7 @@ var addMessage = function(messageObject){
                                      
                                         <ul class="nav navbar-nav navbar-right">
                                              <li><a class ="shake2" href="javascript:layerChange('/game-list')" style="color:white; font-size:18px">Games</a></li>
-                                             <li><a class ="shake2" href="javascript:layerChange('/messages')" style="color:white;font-size:18px">Messages</a></li>
+                                             <li><a class ="shake2" href="javascript:layerChange('/sendMessage')" style="color:white;font-size:18px">Messages</a></li>
                                              <li><a class ="shake2" href="javascript:layerChange('/rss')" style="color:white;font-size:18px">RSS Feed</a></li>
                                              <li><a class ="shake2" href="/logout" style="color:white;font-size:18px">Logout</a></li>
                         
@@ -411,7 +411,7 @@ sometimes by accident, sometimes on purpose (injected humour and the like).</p>
     <div class="tail1"></div>
     <div class="tail2"></div>
 </div>
-<p class='name'>TableGamePortalBOT@tgame.ru</p>
+<p class='chat_name'>TableGamePortalBOT@tgame.ru</p>
 </div>
      
      

@@ -113,9 +113,11 @@ module.exports = function(app, passport) {
 
         fs.exists(paths_reciever, function(exists){
         if (exists) {
-		
-    tryxml('sent',        paths_sender,     message.to_user,            message.message);
-    tryxml('recieved',    paths_reciever,   req.user.local.email,       message.message);
+	    tryxml('recieved',    paths_reciever,   req.user.local.email,       message.message);
+	    tryxml('sent',        paths_sender,     message.user,            message.message);
+	    
+    
+
     res.send('success');
          }
           else{
@@ -143,6 +145,10 @@ module.exports = function(app, passport) {
 			
 	app.get('/sendMessage', isLogged, function(req, res) {
 		res.render('message_shell.ejs');
+	});
+	
+		app.get('/sendMessage_form', isLogged, function(req, res) {
+		res.render('send_message.ejs');
 	});
 
 

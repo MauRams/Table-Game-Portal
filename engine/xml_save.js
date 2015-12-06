@@ -1,4 +1,5 @@
 module.exports = function (what,paths,user,message){
+    console.log(what+'  '+paths+'  '+user+'  '+message);
     var xmldom = require('xmldom').DOMParser,
     fs = require('fs');
 fs.readFile(paths, 'utf-8', function (err, data) {

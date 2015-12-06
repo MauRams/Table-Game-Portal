@@ -7,7 +7,7 @@
         <body>
           <h2>High Scores</h2>
             <table border = "1">
-              <tr bgcolor = "#9acd32">
+              <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Game</th>

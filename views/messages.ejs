@@ -1,30 +1,5 @@
 
-<style>
 
-#messages{
-    
-    background-image:url('img/messages-background.jpg');
-    height:880px;
-    color:#661400;
-}
-.header {
-        color: #36A0FF;
-        font-size: 27px;
-        padding: 10px;
-    }
-
-    .bigicon {
-        font-size: 35px;
-        color: #36A0FF;
-    }
-.centered{
-float: none;
-margin: 0 auto;
-
-
-}
-
-</style>
 
     
            <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,113 +14,117 @@ margin: 0 auto;
             <script src="js/bootstrap.js"></script>
             
         
-        
-     	<!-- Script for Shaking the Button-->
-     	
-     	
-
-                                <script type="text/javascript">
-                                jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
-                                  
-                                    intShakes = intShakes || 10;
-                                    intDistance = intDistance || 2;
-                                    intDuration = intDuration || 1000;
-                                  
-                                    this.each(function() {
-                                        $(this).css("position","relative"); 
-                                        for (var x=1; x<=intShakes; x++) {
-                                        $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
-                                    .animate({left:intDistance}, ((intDuration/intShakes)/2))
-                                    .animate({left:0}, (((intDuration/intShakes)/4)));
-                                    }
-                                  });
-                                return this;
-                                };
-                                </script>
-                                
-                                
-                                     	
-                	<script>
-                       	$( document ).ready(function() {
-                                                                   	
-                 $("#messages").hover(function(){
-
-                     $(this).shake();
-                      $(this).css('background-color', 'red')
-                  }, function() {
-                      $(this).css('background-color', '')
-                 
-
-                       });
-                      
-                      });
-                  
-                </script>
-                                                                                                                
-                                                  <!-- End of the Script that shakes the button -->     
+        <style>
+#messages{
     
-    <div id="messages"  class="row" >
+    background-image:url('img/messages-background.jpg');
+    height:880px;
+    color: 
+
+ #800033;
+}
+.header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+.bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+
+.centered{
+float: none;
+margin: 0 auto;
+
+
+}
+
+
+</style>
+     
+                                
+                                
+                                    
+    
+    <div id="messages"  class="row"  >
         
          
-                    <div class="row centered ">
+                    <div class="row ">
+                        
                         <div class="col-sm-8 col-sm-offset-2 text">
+                            
+                            
                             <h1><strong>Get In Touch</strong></h1>
                            
                         </div>
+                        
                     </div>
                     
                     <br/>
                     
                     
-   <div class="row">
-                        
-                        
-             <div class="col-md-8  centered">
+                   <div class="row centered">
+                                        
+                                        
+                             <div class="col-md-8 centered">
+                                 
+                              <div class="well well-sm " style="background:  #ccccff">
+                                <form class="form-horizontal" >
+                                    
+                                    
+                                    <fieldset>
+                                       
+                                        <legend class="text-center header">
+                                            
+                                                    <button onclick='()' class="btn btn-default" type="button">Send Message</button>
+                                                    <button onclick='()' class="btn btn-default" type="button">Message Sent</button>
+                                                    <button onclick='()' class="btn btn-default" type="button">Inbox</button>
+                                            
+                                            
+                                        </legend>
+                                        
+                
+                                                  <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-4 control-label" >Player Name</label>
+                                                    <div class="col-sm-7">
+                                                      <input type="email" class="form-control" id="inputEmail3" placeholder="Please Enter player's Name">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  
                  
-              <div class="well well-sm"  style="background:  #ccccff">
-                <form class="form-horizontal" >
-                    <fieldset>
-                       
-                        <legend class="text-center header">
-                            
-                        <button onclick='()' class="btn btn-default" type="button">Send Message</button>
-                        <button onclick='()' class="btn btn-default" type="button">Message Sent</button>
-                        <button onclick='()' class="btn btn-default" type="button">Inbox</button>
-                            
-                            
-                       </legend>
-
-                                  <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-4 control-label" >Player Name</label>
-                                    <div class="col-sm-7">
-                                      <input type="email" class="form-control" id="inputEmail3" placeholder="Please Enter player's Name">
-                                    </div>
-                                  </div>
-                                  
-                                  
- 
-  
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                            <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here" rows="7"></textarea>
+                  
+                
+                                        <div class="form-group">
+                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here" rows="7"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                
+                                        <div class="form-group">
+                                            <div class="col-md-12 text-center">
+                                                <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </fieldset>
+                                    
+                                </form>
+                                
                             </div>
+                            
+                            
+                            
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-                        
-                    
-                    
-    </div>
+                                        
+                                    
+                                    
+                    </div>
                     
                     
      </div>

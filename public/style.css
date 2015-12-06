@@ -111,3 +111,8 @@ box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
 .down_side_window{
 	background-color:#50686A;
 }
+
+.chat_small{
+    background-color:#FAFAFA;
+    scrollbar-face-color: #fafafa;
+}

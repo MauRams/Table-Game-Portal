@@ -18,11 +18,19 @@ body{
 	padding-top:20px;
 	padding-bottom:20px;
 }
-#chatWindow{
-	border: 1px solid brown;
-	clear: all;
-}
 
+.main_window{
+	 background-image: url("img/seamless-dark-texture-with-small-grid.jpg");
+    background-color: #50686A;
+    border-radius:10px;
+    border:2px solid #50686A;
+    color:snow;
+    margin-bottom:10px;
+    
+    -webkit-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
+}
 
 
 

@@ -1,11 +1,11 @@
-<div id='login_form' class="col-sm-6 col-sm-offset-3">
+<div id='login_form' class="col-sm-6 col-sm-offset-3" id="mainSlide">
     <h1><span class="fa fa-sign-in"></span> ~Login~</h1>
     <!-- show any messages that come back with authentication -->
     <% if (messagelog.length > 0) { %>
         <div class="alert alert-danger"><%= messagelog %></div>
     <% } %>
     <!-- LOGIN FORM -->
-
+    <div class = "main_window">
         <div class="form-group">
             <label>Email</label>
             <input id='login_email' type="text" class="form-control" name="email">
@@ -16,6 +16,7 @@
         </div>
         <button id='login'class="btn btn-warning btn-lg">Login</button>
 
-    <hr>
-    <p>Need an account? <a href="javascript:fillAjax('/signup_one','main')">Signup</a></p>
-</div>
+        <hr>
+        <p>Need an account? <a href="javascript:fillAjax('/signup_one','main')">Signup</a></p>
+        </div>
+    </div>

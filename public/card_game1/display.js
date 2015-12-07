@@ -1374,6 +1374,7 @@ if(cardsInDeck === false){
     document.getElementById("end_info").innerHTML = "You Lost!";
     playerWonGame = false;
     gameNotPlayed = false;
+    writeScore();
   }
   else if(desk.length==0&&player1.length ==0){
       noWinner = false;
@@ -1383,6 +1384,7 @@ if(cardsInDeck === false){
     document.getElementById("end_info").innerHTML = "Congratulations, You Won!";
     playerWonGame = true;
     gameNotPlayed = false;
+    writeScore();
   }
   else if(desk.length==0&&player1.length ==0&&player2.length == 0){
     noWinner = false;
@@ -1390,13 +1392,35 @@ if(cardsInDeck === false){
     endSlide();
     document.getElementById("end_info").innerHTML = "Draw, no winner!";
     gameNotPlayed = true;
+    writeScore();
   }
   document.getElementById("playerWon").innerHTML = player.score;
   document.getElementById("end_playerWon").innerHTML = player.score;
   document.getElementById("end_computerWon").innerHTML = computer.score;
   document.getElementById("computerWon").innerHTML = computer.score;
+  
+  
+  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@RECORDING GAME HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//WRITING AND RECORDING LAST GAME PLAYED
+function writeScore(){
+     var messageObj ={game:'CardGame1',player_score:player.score,computer_score:computer.score};
+        $.post("/writeScoreOfGame",
+        {
+          message: messageObj
+        },
+        function(data,status){ 
+          if(data== 'done'){
+              alert('Your result was recorder!');
+          }
+
+        });
+  
+}
+  
+  
 }
 console.log("CHECKWIN WORKING");
+
 }
 
 function fin(){
@@ -1438,6 +1462,8 @@ player.score = 0;
 computer.score = 0;
 fin();
 }
+
+
 function restart(){
 //this triggers function that decides who starts first
 endSlide();

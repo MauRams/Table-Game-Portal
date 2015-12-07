@@ -1,6 +1,9 @@
 //login code was referenced from
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
-
+	//required to transform
+	
+	            var writeScoreXml = require('../engine/xml_writeScore.js'),
+	            fs = require('fs');
 module.exports = function(app, passport) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // get the xml sheet for the rss feed
@@ -95,6 +98,22 @@ module.exports = function(app, passport) {
 			user : req.user // get the user out of session and pass to template
 		});
     });
+    
+//WRITING TO THE XML FIE FOR THE GAME SCORES
+
+
+app.post('/writeScoreOfGame', function(req, res) {
+    var message = req.body.message;
+    console.log(message);
+    writeScoreXml(req.user.local.email,message);
+    res.send('done');
+    
+});
+    
+    
+    
+    
+    
 };
 
 function isLogged(req, res, next){

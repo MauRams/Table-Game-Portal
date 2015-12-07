@@ -19,13 +19,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <div class="list-group">
 
     
-      <xsl:for-each select="messages/recieved">
-        
+      <xsl:for-each select="scores/score">
+        <xsl:sort order="descending" select="position()" data-type="number"/>
           <a href="#" class="list-group-item">
           <span class="glyphicon glyphicon-star-empty"></span>
-          <span class="name" style="min-width: 120px;display: inline-block;">From: <xsl:value-of select="user"/></span>
+          <span class="name" style="min-width:120px;display: inline-block;"><xsl:value-of select="game"/> </span>
+          
+          <span class="name" style="min-width:120px;display: inline-block;"> Player Name: <xsl:value-of select="playerName"/> </span>
+          
+          <span class="name" style="min-width:120px;display: inline-block;"> SCORE:
+          <xsl:value-of select="userScore"/> / <xsl:value-of select="computerScore"/></span>
+           <span class="badge"><xsl:value-of select="date"/></span>
+           <br/>
+          
           <br/>
-     <span class="text-muted" style="font-size: 11px;"><xsl:value-of select="text"/></span></a>
+   
+     
+     
+     </a>
 
       </xsl:for-each>
       

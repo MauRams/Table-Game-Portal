@@ -15,7 +15,6 @@ module.exports = function(app, passport) {
     // get the xml sheet for the rss feed
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    var xslt_transform = require('../engine/xslt_transform.js');//script to apply transformations to the xml file
     		//XSLT return to the user ON REQUEST
 	app.get('/rss', isLogged, function(req, res) {
 	var paths = './rss/rss.xml';
@@ -156,6 +155,12 @@ app.post('/writeScoreOfGame', function(req, res) {
 
 		
 	});
+	
+		app.get('/score', isLogged, function(req, res) {
+	var paths = './xmlStorage/last_game_scores.xml';
+	var transform = './xsltStorage/recent_games.xsl';
+	res.send(xslt_transform(transform,paths));
+    });
 			//RETURNING SENDING FORM
 			
 	app.get('/sendMessage', isLogged, function(req, res) {

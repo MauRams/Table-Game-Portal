@@ -24,6 +24,15 @@ var user = <%- JSON.stringify(user.local.email) %>;
 console.log(user);
 </script>
 <script src="js/sockets_chat.js"></script>
+<script>
+	$( document ).ready(function() { 
+	    simpleAjax('/score','last_games_played');
+	    
+	});
+
+</script>
+
+
 
 <!--Code snippet from: http://stackoverflow.com/questions/22122111/how-to-display-text-over-an-image-in-bootstrap-3-1-->
 <div onload="checkConnections()" id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -61,9 +70,7 @@ console.log(user);
                         
                                         </ul>
                                      </div>
-                
                 </div>
-            
 </div>
 <br/>
 <div class="container">
@@ -72,7 +79,7 @@ console.log(user);
 				    <div class=' main_window'>
 <h4>10 Last Games</h4>
 <hr/>
-<div id='last_games_played'></div>
+<div id='last_games_played'>
 <p>deniss@deniss.den</p>
 <p>Game1 SCORE 1:0</p>
 
@@ -81,6 +88,9 @@ console.log(user);
 
 <p>d2eniss@deniss.den</p>
 <p>Game1 SCORE 1:0</p>
+    
+</div>
+
 
 	</div>
     

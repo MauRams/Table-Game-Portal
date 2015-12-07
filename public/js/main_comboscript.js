@@ -1,4 +1,4 @@
-//~@~~~#######SHAKING BUTTON PART
+//~@~~~#######SHAKING BUTTON PART TAKEN FROM STACKOWERFLOW.COM
   jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
                                     intShakes = intShakes || 2;
                                     intDistance = intDistance || 3;

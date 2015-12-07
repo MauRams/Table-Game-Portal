@@ -27,8 +27,12 @@ var createMessage = function(text,user,what){
   element.appendChild(fromEl);
 
 
+
+var now = new Date();
+var fdate = now.getDate() +'/'+now.getMonth()+'/'+now.getFullYear()+' '+now.getHours()+':'+now.getMinutes();
+
    var dateEl = doc.createElement("date");
-   var dateTxt = doc.createTextNode('000');
+   var dateTxt = doc.createTextNode(fdate);
    dateEl.appendChild(dateTxt);
    element.appendChild(dateEl);
 

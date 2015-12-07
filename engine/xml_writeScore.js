@@ -29,6 +29,15 @@ fs.readFile(paths, 'utf-8', function (err, data) {
   
   var element = doc.createElement('score');
   
+  var now = new Date();
+var fdate = now.getDate() +'/'+now.getMonth()+'/'+now.getFullYear()+' '+now.getHours()+':'+now.getMinutes();
+  
+    var textElz = doc.createElement("date");
+  var textTxtz = doc.createTextNode(fdate);
+  textElz.appendChild(textTxtz);
+  element.appendChild(textElz);
+  
+  
   var textEl = doc.createElement("game");
   var textTxt = doc.createTextNode(from_client.game);
   textEl.appendChild(textTxt);

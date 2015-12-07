@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><scores>
 
 
-<score>
-    
-    <game>CardGame1</game>
-    <computerScore>5</computerScore>
-    <userScore>1</userScore>
-    <playerName>some_some@mail.com</playerName>
 
-</score>
 
-<score>
-    <game>CardGame1</game>
-    <computerScore>0</computerScore>
-    <userScore>1</userScore>
-    <playerName>Arezki_arezki@a.lv</playerName>
-</score>
+
+
+
+
+
 
 <score>
     
@@ -44,25 +36,7 @@
 
 </score>
 
-<score>
-    
-    <game>CardGame1</game>
-    <computerScore>0</computerScore>
-    <userScore>1</userScore>
-    <playerName>some</playerName>
-
-</score>
-
-<score>
-    
-    <game>CardGame1</game>
-    <computerScore>0</computerScore>
-    <userScore>1</userScore>
-    <playerName>some</playerName>
-
-</score>
-
     
 
 
-<score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>2</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score></scores>
+<score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>2</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11 time: 22:28</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><date>7/11 time: 22:35</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score></scores>

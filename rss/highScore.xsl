@@ -3,8 +3,18 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
     <html>
-      <head/>
+      <head>
+        <style>
+          table{
+          padding-bottom:10px;
+          }
+          td{
+          color: white;
+          }
+        </style>
+      </head>
         <body>
+          <div class ="main_window">
           <h2>High Scores</h2>
             <table border = "1">
               <tr>
@@ -22,6 +32,7 @@
                 </tr>
               </xsl:for-each>
             </table>
+            </div>
         </body>
     </html>
   </xsl:template>

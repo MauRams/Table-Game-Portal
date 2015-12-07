@@ -3,11 +3,20 @@
 <head>
     <title>Table Game Portal</title>
     <meta name = "viewport" content = "width=device-width, initial-scale = 1"> <!-- do we need here for mobile or is it placed somewhere else? -->
+    <link rel = "stylesheet" href="style-maurice.css" type = "text/css"/>
     <link rel="stylesheet" href="css/style-arezki.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <!--CARD GAME-->
+        <link href="card_game1/style_cards.css" rel="stylesheet" />
         <!-- we need JQUERY to do JQUERY tricks -->
     <script src="jquery-1.11.3.js" type="text/javascript"></script>
-
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+     	
+    <script>
+        function loadDiv(){
+            $(".mainSlide").slideDown('slow');//slide in main page
+        };
+    </script>
     <script>
 //GETTINV VALUE FROM TEMPLATING ENGINE
 var condition = <%- JSON.stringify(condition) %>;
@@ -70,10 +79,12 @@ function fillAjax(url,id){
     
     </style>
 </head>
-<body>
-<div id='mainContainer'>    
+<body onload="loadDiv()">
+    <!--loadDiv slides in page at launch of app-->
+<div id='mainContainer'  class = "mainSlide">  
+<!--mainSlide styles are in styles-maurice.css-->
 <div id='login_form' class="col-sm-6 col-sm-offset-3">
-    <h1><span class="fa fa-sign-in"></span> ~Login~</h1>
+    <h1 class ="loginHeader"><span class="fa fa-sign-in"></span>Login</h1>
     <!-- show any messages that come back with authentication -->
     <% if (messagelog.length > 0) { %>
         <div class="alert alert-danger"><%= messagelog %></div>
@@ -91,7 +102,7 @@ function fillAjax(url,id){
         <button id='login'class="btn btn-warning btn-lg">Login</button>
     <hr>
     <p>Need an account? <a href="javascript:fillAjax('/signup_one','mainContainer')">Signup</a></p>
-
+</div>
 </div>
 
 

@@ -13,16 +13,9 @@
 
 
 
-<score>
-    
-    <game>CardGame1</game>
-    <computerScore>0</computerScore>
-    <userScore>1</userScore>
-    <playerName>some</playerName>
 
-</score>
 
     
 
 
-<score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>2</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11 time: 22:28</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><date>7/11 time: 22:35</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11/2015 22:56</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11/2015 23:2</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score></scores>
+<score><game>CardGame1</game><computerScore>2</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11 time: 22:28</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>123</playerName></score><score><date>7/11 time: 22:35</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11/2015 22:56</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11/2015 23:2</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>some</playerName></score><score><date>7/11/2015 23:24</date><game>CardGame1</game><computerScore>1</computerScore><userScore>0</userScore><playerName>email@email.email.com</playerName></score><score><date>7/11/2015 23:24</date><game>CardGame1</game><computerScore>2</computerScore><userScore>0</userScore><playerName>email@email.email.com</playerName></score></scores>

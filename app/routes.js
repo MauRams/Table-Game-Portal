@@ -3,7 +3,13 @@
 	//required to transform
 	
 	            var writeScoreXml = require('../engine/xml_writeScore.js'),
+
+
+	 xslt_transform = require('../engine/xslt_transform.js'),
+	            tryxml = require('../engine/xml_save.js'),
 	            fs = require('fs');
+	            
+	            
 module.exports = function(app, passport) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // get the xml sheet for the rss feed
@@ -43,7 +49,7 @@ module.exports = function(app, passport) {
     });
     //gets chat div from views
     app.get('/messages', isLogged, function(req, res){
-        res.render('messages.ejs');
+        res.render('message_shell.ejs');
     });
     //gets form from views
     app.get('/form' , isLogged, function(req, res){
@@ -109,6 +115,59 @@ app.post('/writeScoreOfGame', function(req, res) {
     res.send('done');
     
 });
+    
+	//XML HANDLING 
+	app.post('/sendMessageToUser', function(req, res) {
+    var message = req.body.message;
+    console.log(message);
+    var paths_sender = './xmlStorage/'+req.user.local.email+'.xml';
+    var paths_reciever = './xmlStorage/'+message.user+'.xml';
+
+    console.log(paths_sender);
+    console.log(paths_reciever);
+
+        fs.exists(paths_reciever, function(exists){
+        if (exists) {
+	    tryxml('recieved',    paths_reciever,   req.user.local.email,       message.message);
+	    tryxml('sent',        paths_sender,     message.user,            message.message);
+	    
+    
+
+    res.send('success');
+         }
+          else{
+		res.send('noFile');
+
+}
+}); 
+});
+			//XSLT return to the user ON REQUEST
+		app.get('/sent', isLogged, function(req, res) {
+		var paths = './xmlStorage/'+req.user.local.email+'.xml';
+		var transform = './xsltStorage/sent.xsl';
+		res.send(xslt_transform(transform,paths));
+
+	});
+	
+			app.get('/recieved', isLogged, function(req, res) {
+		var paths = './xmlStorage/'+req.user.local.email+'.xml';
+		var transform = './xsltStorage/recieved.xsl';
+		res.send(xslt_transform(transform,paths));
+
+		
+	});
+			//RETURNING SENDING FORM
+			
+	app.get('/sendMessage', isLogged, function(req, res) {
+		res.render('message_shell.ejs');
+	});
+	
+		app.get('/sendMessage_form', isLogged, function(req, res) {
+		res.render('send_message.ejs');
+	});
+    
+    
+    
     
     
     

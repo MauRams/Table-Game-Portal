@@ -25,8 +25,14 @@ console.log(user);
 </script>
 <script src="js/sockets_chat.js"></script>
 <script>
-	$( document ).ready(function() { 
+	$( document ).ready(function() {
 	    simpleAjax('/score','last_games_played');
+	    //if someone would play game, score would refresh
+	   $("#refresh_icons").click(function(){
+	       simpleAjax('/score','last_games_played');
+	   });
+	      
+	   
 	    
 	});
 
@@ -77,7 +83,8 @@ console.log(user);
 
 				<div class="col-md-2">
 				    <div class=' main_window'>
-<h4>10 Last Games</h4>
+<h4>10 Last Games <span id='refresh_icons' class="glyphicon glyphicon-refresh"></span></h4>
+
 <hr/>
 <div id='last_games_played'>
 <p>deniss@deniss.den</p>

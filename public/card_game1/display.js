@@ -1414,7 +1414,6 @@ function writeScore(){
           }
 
         });
-  
 }
   
   

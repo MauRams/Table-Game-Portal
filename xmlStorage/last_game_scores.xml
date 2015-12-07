@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><scores>
-    
-
-
-
 
 <score>
     
@@ -12,7 +8,6 @@
     <playerName>denmantm@inbox.lv</playerName>
 
 </score>
-
 <score>
     
     <game>CardGame1</game>
@@ -23,12 +18,10 @@
 </score>
 
 <score>
-    
     <game>CardGame1</game>
     <computerScore>0</computerScore>
     <userScore>1</userScore>
     <playerName>Arezki_arezki@a.lv</playerName>
-
 </score>
 
 <score>

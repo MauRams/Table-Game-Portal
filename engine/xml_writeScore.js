@@ -27,7 +27,6 @@ fs.readFile(paths, 'utf-8', function (err, data) {
   doc.documentElement.removeChild(lastElement);
   }
   
-  
   var element = doc.createElement('score');
   
   var textEl = doc.createElement("game");

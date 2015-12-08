@@ -80,9 +80,13 @@ var valid = function (text) {
 
     return true;
 };
-console.log(valid(writetofile));
 
+var validXML = valid(writetofile);
 
+console.log('XML valid: '+validXML);
+    
+    //write if valid
+    if(validXML){
           //writing file to the disk
           fs.writeFile(paths, doc, function(err) {
           if(err) {
@@ -90,6 +94,15 @@ console.log(valid(writetofile));
               }
           console.log("The file was saved!");
 })
+
+        
+    }
+    //return false if not valid
+    else{
+        console.log('Problems with xml validation');
+        return false;
+        
+    }
 
 });
 }

@@ -3,21 +3,21 @@
 //https://scotch.io/tutorials/easy-node-authentication-setup-and-local
 
     // all of the dependencies that we need for the project
-    var express  = require('express');
-    var app      = express();
-    var port     = process.env.PORT || 3000;
-    var mongoose = require('mongoose');
-    var passport = require('passport');
-    var flash    = require('connect-flash');
+    var express  = require('express'),
+    app      = express(),
+    port     = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    passport = require('passport'),
+    flash    = require('connect-flash'),
     
-    var morgan       = require('morgan');
-    var cookieParser = require('cookie-parser');
-    var bodyParser   = require('body-parser');
-    var session      = require('express-session');
+    morgan       = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser   = require('body-parser'),
+    session      = require('express-session'),
     
-    var configDB = require('./config/database.js');
-    var xslt = require('node_xslt');
-    var feeder = require('feed');//need this for RSS feed
+    configDB = require('./config/database.js'),
+    xslt = require('node_xslt'),
+    feeder = require('feed');//need this for RSS feed
     
     // configuration ===============================================================
     mongoose.connect(configDB.url); // connect to our database

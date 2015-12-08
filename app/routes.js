@@ -36,6 +36,12 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	});
 //MAIN CENTER DIV LOADS
+
+        //returning rss page
+    app.get('/rssDisplay', isLogged, function(req, res){
+        res.render('rssShell.ejs');
+    });
+
     			//RETURNS cardGame1
 	app.get('/card_game1', isLogged, function(req, res) {
 
@@ -46,16 +52,11 @@ module.exports = function(app, passport) {
     app.get('/game-list', isLogged, function(req, res){
         res.render('Game-list.ejs');
     });
-    //gets chat div from views
+    //gets inbox div from views
     app.get('/messages', isLogged, function(req, res){
         res.render('message_shell.ejs');
     });
-    //gets form from views
-    app.get('/form' , isLogged, function(req, res){
-        res.render('form.ejs');
-    });
     
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
     //STARTING TO GENERATE CODE FOR ONE PAGE CONCEPT
     app.get('/one', isLogged, function(req, res) {
@@ -173,11 +174,28 @@ app.post('/writeScoreOfGame', function(req, res) {
     
     
     
+    //RETURNING RSS FEED HERE:
     
     
+   var rssSend = function(){
+            //assembling object to send:
+                var blogs = [
+      {title: 'GamePost 1', url : 'http://someurl.com/blog1', pubDate : new Date(), description: 'This game is now avalable' },
+      {title: 'GamePost 2', url : 'http://someurl.com/blog2', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 3', url : 'http://someurl.com/blog3', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 4', url : 'http://someurl.com/blog4', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 5', url : 'http://someurl.com/blog5', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 6', url : 'http://someurl.com/blog6', pubDate : new Date(), description: 'Not avalable Yet' },
+    ];
+            return require('../noderss')(blogs);
+        }
     
     
-    
+    //sending rss feed to the user MAKING IT AVALABLE FOR NOT LOGGED USERS AS WELL
+        app.get('/getrss', function(req, res){
+        res.end(rssSend());
+    });
+
 };
 
 function isLogged(req, res, next){

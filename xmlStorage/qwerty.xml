@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><messages>
+    
+    <recieved>
+    <text>Are you around? We should talk</text>
+    <user>Areazky_Buisness@ncirl.ie</user>
+    <date>01/30/2015</date>
+</recieved>
+
+<recieved>
+    <text>Hey, how are you man?</text>
+    <user>Buisness@nci.com</user>
+    <date>03/20/2015</date>
+</recieved>
+
+<recieved>
+    <text>Is there anything you want to discuss?</text>
+    <user>Maurice_College@somedomain.lv</user>
+    <date>02/30/2015</date>
+</recieved>
+
+<sent>
+    <text>Hello, im registered now you can be happy!</text>
+    <user>Moderator@tgames.ru</user>
+    <date>01/20/2015</date>
+</sent>
+    
+    
+    
+     <recieved><text>Welcome! In this section you will be able to view all incoming messages from other users</text><user>TableGamePortalBOT@tgame.ru</user><date>-</date></recieved><sent><text>Hi, In this section you will be able to view all outgoing messages to other users</text><user>TableGamePortalBOT@tgame.ru</user><date>-</date></sent></messages>

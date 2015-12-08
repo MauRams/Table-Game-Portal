@@ -69,7 +69,7 @@ module.exports = function(passport) {
                 var name = email,
                     fs = require('fs'),
                     paths = './xmlStorage/'+name+'.xml',
-                    newFile = '<?xml version="1.0" encoding="UTF-8"?><messages></messages>';
+                    newFile = '<?xml version="1.0" encoding="UTF-8"?><messages> <recieved><text>Welcome! In this section you will be able to view all incoming messages from other users</text><user>TableGamePortalBOT@tgame.ru</user><date>-</date></recieved><sent><text>Hi, In this section you will be able to view all outgoing messages to other users</text><user>TableGamePortalBOT@tgame.ru</user><date>-</date></sent></messages>';
                     fs.writeFile(paths, newFile, function(err){
 
                     if(err) {

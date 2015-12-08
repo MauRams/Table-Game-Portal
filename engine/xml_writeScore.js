@@ -3,6 +3,7 @@ module.exports = function (user,from_client){
 var paths = './xmlStorage/last_game_scores.xml';
 
     var xmldom = require('xmldom').DOMParser,
+        libxmljs = require('libxmljs'),
     fs = require('fs');
     
     
@@ -64,6 +65,23 @@ var fdate = now.getDate() +'/'+now.getMonth()+'/'+now.getFullYear()+' '+now.getH
  var XMLSerializer = require('xmldom').XMLSerializer;
 var serializer = new XMLSerializer();
 var writetofile = serializer.serializeToString(doc);
+
+
+//XML VALIDATION HERE::
+// COURCE CODE TAKEN FROM:: http://stackoverflow.com/questions/11050759/validate-xml-syntax-structure-with-node-js
+
+
+var valid = function (text) {
+    try {
+        libxmljs.parseXml(text);
+    } catch (e) {
+        return false;
+    }
+
+    return true;
+};
+console.log(valid(writetofile));
+
 
           //writing file to the disk
           fs.writeFile(paths, doc, function(err) {

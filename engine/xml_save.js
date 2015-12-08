@@ -1,6 +1,7 @@
 module.exports = function (what,paths,user,message){
     console.log(what+'  '+paths+'  '+user+'  '+message);
     var xmldom = require('xmldom').DOMParser,
+    libxmljs = require('libxmljs'),
     fs = require('fs');
 fs.readFile(paths, 'utf-8', function (err, data) {
   if (err) {
@@ -46,6 +47,25 @@ createMessage(message,user,what);
 var serializer = new XMLSerializer();
 var writetofile = serializer.serializeToString(doc);
 
+
+var valid = function (text) {
+    try {
+        libxmljs.parseXml(text);
+    } catch (e) {
+        return false;
+    }
+
+    return true;
+};
+
+var validXML = valid(writetofile);
+
+console.log('XML valid: '+validXML);
+    
+    //write if valid
+    if(validXML){
+
+
           //writing file to the disk
           fs.writeFile(paths, doc, function(err) {
           if(err) {
@@ -53,6 +73,13 @@ var writetofile = serializer.serializeToString(doc);
               }
           console.log("The file was saved!");
 })
+}
+ //return false if not valid
+    else{
+        console.log('Problems with xml validation');
+        return false;
+        
+    }
 
 });
 }

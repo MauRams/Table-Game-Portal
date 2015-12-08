@@ -33,6 +33,6 @@ $.fn.typer = function (text, options) {
         });
     })(0);
 };
-$('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']);
+$('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest </h2> <u style="color:white"> Ever Table </u> <p style="color:yellow;font-weight:bold" > Portal Web Site </p>']);
 setInterval(function(){ $('#bannerText').typer(['<h2 style="color:red; font-weight:bold">Nicest</h2> <u style="color:white">Ever Table</u> <p style="color:yellow;font-weight:bold" >Portal Web Site</p>']); }, 25000);
 });

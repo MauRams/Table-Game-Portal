@@ -1,5 +1,5 @@
 {
-  "name": "node-authentication",
+  "name": "Table-Game-Portal",
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",

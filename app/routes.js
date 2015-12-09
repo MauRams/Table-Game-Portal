@@ -173,19 +173,19 @@ app.post('/writeScoreOfGame', function(req, res) {
 	});
     
     
-    
-    //RETURNING RSS FEED HERE:
+//RETURNING RSS FEED HERE:
+
     
     
    var rssSend = function(){
             //assembling object to send:
                 var blogs = [
-      {title: 'GamePost 1', url : 'http://someurl.com/blog1', pubDate : new Date(), description: 'This game is now avalable' },
-      {title: 'GamePost 2', url : 'http://someurl.com/blog2', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 3', url : 'http://someurl.com/blog3', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 4', url : 'http://someurl.com/blog4', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 5', url : 'http://someurl.com/blog5', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 6', url : 'http://someurl.com/blog6', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 1', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'This game is now avalable' },
+      {title: 'GamePost 2', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 3', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 4', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 5', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
+      {title: 'GamePost 6', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
     ];
             return require('../noderss')(blogs);
         }

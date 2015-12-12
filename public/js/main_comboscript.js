@@ -34,7 +34,6 @@
                        });
                       });
 
-
 //SCRIPT FOR LAYER CHANGE AND AJAX
 
 //changeLayers

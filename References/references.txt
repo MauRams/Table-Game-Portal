@@ -5,3 +5,5 @@ Messages background-image from ***** http://azmind.com *****
 Chacking button from http://stackoverflow.com/questions/25928385/how-to-use-the-jquery-shake-effect-on-button-click
 
 The video game from https://www.youtube.com/watch?v=37jAiFBQCz4
+
+Hover image text from http://jiansenlu.blogspot.ca/2013/09/hover-over-for-text-hint-box-using.html

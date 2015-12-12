@@ -10,11 +10,9 @@ module.exports = function(blogs){
                                 'Deniss Strods',
                                 'https://table-game-portal-denamntm.c9users.io/getrss',
                                 {'CustomTag' : 'Check it every Week!' });
-
-    blogs.forEach(function (blog) {
+    blogs.rss.forEach(function (blog) {
         feed.addNewItem(blog.title, blog.url, blog.pubDate, blog.description, {});
     });
- 
     // now to get the XML simply call the getFeedXML function 
     var xmlString = rss.getFeedXML(feed);
 

@@ -3,11 +3,11 @@
 	//required to transform
 	
 	            var writeScoreXml = require('../engine/xml_writeScore.js'),
-
-
 	 xslt_transform = require('../engine/xslt_transform.js'),
 	            tryxml = require('../engine/xml_save.js'),
-	            fs = require('fs');
+	            fs = require('fs'),
+	            readJson = require('../engine/json_read.js'),
+	            writeScore = require('../engine/json_write_rss.js');
 	            
 	            
 module.exports = function(app, passport) {
@@ -175,29 +175,31 @@ app.post('/writeScoreOfGame', function(req, res) {
     
 //RETURNING RSS FEED HERE:
 
-    
-    
    var rssSend = function(){
-            //assembling object to send:
-                var blogs = [
-      {title: 'GamePost 1', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'This game is now avalable' },
-      {title: 'GamePost 2', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 3', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 4', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 5', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
-      {title: 'GamePost 6', url : 'https://table-game-portal-denamntm.c9users.io', pubDate : new Date(), description: 'Not avalable Yet' },
-    ];
+            //assembling object to send in this case we just reading it from the disk
+                var blogs = readJson('./jsonStorage/rss.json');
+                
+                
+                console.log(blogs);
             return require('../noderss')(blogs);
         }
-    
-    
+
     //sending rss feed to the user MAKING IT AVALABLE FOR NOT LOGGED USERS AS WELL
         app.get('/getrss', function(req, res){
         res.end(rssSend());
     });
 
-};
 
+            //Preforming game count here for rss feed, depending on which game it is, it updates games count
+        app.get('/countGame1',isLogged, function(req, res){
+        writeScore('game1');
+    }); 
+          
+        app.get('/countGame2',isLogged, function(req, res){
+        writeScore('game2');
+    }); 
+            
+};
 function isLogged(req, res, next){
     // if user is authenticated in the session, carry on 
     if (req.isAuthenticated())
@@ -209,4 +211,3 @@ function isLogged(req, res, next){
             condition : 'login' // get the user out of session and pass to template, in his case the main index page for the app
         });
 }
-

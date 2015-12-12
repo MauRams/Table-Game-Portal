@@ -9,8 +9,23 @@
           padding-bottom:10px;
           }
           td{
-          color: white;
+          color: #fff;
           }
+          th{
+          background-color: yellow;
+          }
+          
+          table{
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+          }
+          
+          h2{
+          margin-left: auto;
+          margin-right: auto;
+          }
+          
         </style>
       </head>
         <body>

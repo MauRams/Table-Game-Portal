@@ -1,0 +1,22 @@
+{
+    "rss": [
+        {
+            "title": "CardGame1",
+            "url": "https://table-game-portal-denamntm.c9users.io",
+            "pubDate": "000000",
+            "description": "Avalable, games played total:2"
+        },
+        {
+            "title": "TicTacToe",
+            "url": "https://table-game-portal-denamntm.c9users.io",
+            "pubDate": "000000",
+            "description": "Avalable, games played total:0"
+        },
+        {
+            "title": "Game3",
+            "url": "https://table-game-portal-denamntm.c9users.io",
+            "pubDate": "000000",
+            "description": "Unavalable"
+        }
+    ]
+}

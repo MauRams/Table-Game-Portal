@@ -1,83 +1,234 @@
- 
- <div class='main_window'>
- 	
- 	
- 
-				
-    
- 	
 
-      <div class="row"><!-- start the game -->
-      	
-      	
-				 <div class="col-sm-12  text-center">
-				 	
-				 	<div style="background-color:#A00000 ; height:10%">
-				 	
-				 	    <h1> Click image and have funnnn !!</h1>
-				 	
-				 	</div class="image">
-				 	
-				 	<hr/>
-					    <a href='javascript:layerChange("card_game1")'>
-					    			   		
-					    <img src="img/big_icon_card.jpg" class=" img-circle img-responsive center-block" alt="Circular holding image"/></a> 
-					     
-			    </div>
-			
-	</div><!--	finish the game-->
+<style>
+#p2{
+    
+    color:white;
+    padding: 10px 10px 10px 10px;
+}
+#p1{
+    font-size:16px;
+    margin-left:5%;
+    color:white;
+}
+#h2{
+    text-align:center;
+    font-size:28px;
+    color:	#87CEFA;
+    margin-left:3%;
+    font-weight:bold;
+}
+
+
+.col-md-11{
+    width:99%;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.img-circle{
+	 border-radius: 25px;
+	padding: 10px 0px 0px 10px;
+}
+#hintbox{
+    display:none;
+    position: absolute;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 1px solid red;
+    padding: 8px;
+    border-radius:10px;
+   width: 20%;
+   text-align:center}
+   
+#main-div{
 	
-	<hr/>
-    	<div class="row"><!-- start the video -->
-    	
-    	<div class="col-sm-12 text-center center">
-    		
-    		 <div style="background-color:#A00000 ; height:10%">
-			   	
-					    <h2>Check Out This video</h2>
-					    
-					  </div>
-       </div>
+	
+background:#808080;
+}
+
+
+.banner_holder{
+    width: 100%;
+    height: 90px;
+    min-height: 150px;
+    position: relative;
+  
+    box-shadow: 2px 2px 2px 5px #161314;
+   
+}
+
+.banner_holderImage{
+    
+    height: 100%;
+    position:relative;
+    background:   url("img/images/image7.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+</style>
+ 
+ 
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+
+ $('.hover').mousemove(function(e){ 
+       var hovertext = $(this).attr('hinttext'); 
        
-       <hr/>
+         $('#hintbox').text(hovertext).show();
+        
+    $('#hintbox').css('left',e.clientY+15).css('left',e.clientX-350);})
+     .mouseout(function(){
+    $('#hintbox').hide();
+ });
+}); 
+</script>
+ 
+ 
+
+
+ 	
+ 	
+ 
 				
-			<div class="col-sm-7 text-center center">
-			  
-					    
-						<div class="embed-responsive embed-responsive-4by3">
-						   <iframe width="80%" height="80%" src="https://www.youtube.com/embed/37jAiFBQCz4" frameborder="0" allowfullscreen></iframe>
-						</div>
-			   
-			   </div>
-			   
-			   <div class="col-sm-3 text-center center">
-			   	
-			       	<p> this video is showing clearly how to plays our game, it takes just a few minutes and you should get a clear idea on how to play the game</p>
-			   	
-			   	</div>
+<div  id="main-div">  
+ 
+                
+                         <div class="row"><!-- start the banner -->
+                         
+                         
+                			    <div class="col-md-11 col-centered">   
+                			    
+                									    <div class="banner_holder">
+                						    <div class="banner_holderImage"></div>  
+                						   
+                										</div>
+                				 	
+                			
+                	           </div>
+                	 
+                	 
+                	 	</div><!--	finish the banner--><br>
+	 	
+	 	<div class="row"><!--start the paragraph-->
+				
+				
+				    <div class="col-sm-12">
+				    
+        				    <h2 id="h2"> Play free Online games In Our Portal</h2>
+        				    <br>
+        				    <p id="p1"> In this part you will be able to play real games developed by the NCI team. <br>
+        				    We aim to achieve a user plain satisfaction, having a nice experience and share<br>
+        				    it with other users that are using our website.<br>
+        				     Please select the game you like and enjoy your time.</p>
+        				    
+        			</div>
+
+		</div><!--finish the paragraph-->		
+				
+											<div id="hintbox"></div>
+												
+										
+											
+								<br><br><br>				
+				
+				
 			
-	</div><!-- finish the video -->
-				
+	
+	
+    
   
     
-     <div class="row">
-				 <div class="col-sm-8">
+     <div class="row"><!-- start the game page-->
+     		
+     
+     	<div class="col-sm-3">
+														
+													
+			
+								
+					<a href='javascript:layerChange("card_game1")' 	 class="hover" hinttext="Click to Play" >
+											 		
+			
+				       <img src="img/durak.jpg" class=" img-circle img-responsive center-block"alt="Circular holding image"/>
+								
+					</a>
+													     	
+		</div>
+		
+		
+				 <div class="col-sm-3">
 			   
-					     <h2 class="text-center"> GAME 3</h2>
-					     <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+					    
+					     <p id="p2">In here you can play the Durak game.<br> This a Russian game aimed to get rid of cards. please enjoy your time </p>
 					   
 			    </div>
 			
-			   <div class="col-sm-4">
+			   <div class="col-sm-3">
+			   
+			   			<img src="img/tictac1.png" class=" img-circle img-responsive center-block" alt="Circular holding image"/>
+			   
+			   </div>
+			   
+			   
+			   <div class="col-sm-3">
+			   
+					    
+					     <p id="p2">This is the famous TicTac Toe game.<br>
+					     This game was played in the Roman Empire and since became a popular distraction </p>
+					   
+			    </div>
+	 </div>
+			 
+			 
+			 <hr/>
+	<div class="row">
+			 
+			 	<div class="col-sm-3">
+														
+													
+				<div id="hintbox"></div>
+								
+					<a href='javascript:layerChange("card_game1")' 	 class="hover" hinttext="Play here" >
+												 		
+			
+				       <img src="img/big_icon_card.jpg" class=" img-circle img-responsive center-block"alt="Circular holding image"/>
+								
+					</a>
+													     	
+		     </div>
+		
+		
+				 <div class="col-sm-3">
+			   
+					    
+					     <p id="p2">is simply dummy text of the printing and typesetting<br>
+					     industry. Lorem Ipsum has been the industry's standard dummy<br>
+					     text ever since the 1500s </p>
+					   
+			    </div>
+			
+			   <div class="col-sm-3">
 			   
 			   			<img src="img/game1.jpg" class=" img-circle img-responsive center-block" alt="Circular holding image"/>
 			   
 			   </div>
 			   
-			  
+			   <div class="col-sm-3">
+			   
+					    
+					     <p id="p2">is simply dummy text of the printing and typesetting<br>
+					     industry. Lorem Ipsum has been the industry's standard dummy<br>
+					     text ever since the 1500s</p>
+					   
+			    </div>
+			
+		</div>	   
 			
 			
-			</div>
+	
     
  
- </div>
+ </div>  

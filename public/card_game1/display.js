@@ -1412,11 +1412,14 @@ function writeScore(){
           if(data== 'done'){
               alert('Your result was recorder!');
           }
-
         });
+        // COUNT THAT GAME WAS PLAYED
+   $.get("/countGame1", function(data, status){
+       console.log('Game Played');
+    });
 }
-  
-  
+
+
 }
 console.log("CHECKWIN WORKING");
 

@@ -47,26 +47,33 @@ var layerChange =function(url){
         },
     	    success: function(result){
         $("#mainGame").html(result);
-   		 }});
-
-
-      $("#mainProfile").slideToggle("slow");
+        
+        
+              $("#mainProfile").slideToggle("slow");
       setTimeout(function(){
       $("#mainGame").slideToggle("slow");
       }, 1000);
       helper = 'first';
+        
+   		 }});
+
     }
     else{
 
 
     	$.ajax({url: url, success: function(result){
         $("#mainProfile").html(result);
-    	}});
-      $("#mainGame").slideToggle("slow");
+        
+              $("#mainGame").slideToggle("slow");
       setTimeout(function(){
       $("#mainProfile").slideToggle("slow");
       }, 1000);
       helper = 'second';
+        
+        
+        
+    	}});
+
     }
     
 };

@@ -30,7 +30,7 @@
       </head>
         <body>
           <div class ="main_window">
-          <h2>High Scores</h2>
+          <h2 class='text-center'>High Scores</h2>
             <table border = "1">
               <tr>
                 <th>Name</th>

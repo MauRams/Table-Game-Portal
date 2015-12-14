@@ -1,5 +1,77 @@
+<script>
+        	   //SOME OF CODE PARTIALLY IS TAKEN FROM http://stackoverflow.com/questions/226663/parse-rss-with-jquery
+    var item;
+        	   
+        	   
+        	    $.ajax({url: '/getrss',
+        	        	    beforeSend: function() {
+    	       // $("#xmlResp").html('<h1>LOADING</h1>');
+        },
+        	    success: function(result){
+        	    
+        	    //cleaning div    
+        	 // $("#xmlResp").html('');
+        	  
+        var xmlDoc = $.parseXML(result);
+        
+    //in this case item is object filled with content from rss feed:
+        var $xml = $(xmlDoc);
+    $xml.find("item").each(function() {
+        var $this = $(this),
+            item = {
+                title: $this.find("title").text(),
+                link: $this.find("link").text(),
+                description: $this.find("description").text(),
+                pubDate: $this.find("pubDate").text(),
+                author: $this.find("author").text()
+        }
+         console.log(item.title);
+         console.log(item.description);
+         
+         var h3 = document.createElement("h3");
+         var text = document.createTextNode(item.title+':');       // Create a text node
+         h3.className = 'rssTitle text-center';
+         h3.appendChild(text);
+         
+         
+         
+         var h4 = document.createElement("h4");
+         var text = document.createTextNode(item.description);      // Create a text node
+         h4.className = 'rssDescription text-center';
+         h4.appendChild(text);
+
+         $("#xmlResp").append(h3);
+         $("#xmlResp").append(h4);
+    
+    
+    });
+        
+       // $("#xmlResp").html(result);
+
+        
+   		 }});
+
+
+    
+</script>
+<style>
+    .rssTitle{
+        color:Yellow;
+    }
+    .rssDescription{
+        color:blue;
+    }
+    
+</style>
+
+
 <div class='main_window'>
-    <h1>Currently avalable Games</h1>
-    <h2>Link to raw RSS XML</h2>
+    <h4 class='text-center'>Currently avalable Games With Game Counter</h4>
+    <hr/>
+    <div id='xmlResp'>
+
+    </div>
+
+    <h2 class='text-center'>Link to raw RSS XML</h2>
     <a style='color:white;'href='https://table-game-portal-denamntm.c9users.io/getrss'>https://table-game-portal-denamntm.c9users.io/getrss</a>
 </div>

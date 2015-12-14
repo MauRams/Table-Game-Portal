@@ -1424,7 +1424,6 @@ function writeScore(){
 console.log("CHECKWIN WORKING");
 
 }
-
 function fin(){
 //this triggers
 

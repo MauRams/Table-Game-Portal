@@ -38,8 +38,40 @@
 
 //changeLayers
 var helper = 'second';
-var layerChange =function(url){
+var layerChange =function(url,cond){
     //login_form, singup_form
+    //THIS IS JUST FOR DISABLING SOME BUTTONS....
+    if(cond==1){
+        //all other nav
+        document.getElementById('nav_msg').className = 'shake2';
+        document.getElementById('nav_rss').className = 'shake2';
+        document.getElementById('nav_top').className = 'shake2';
+        
+    }
+    else if(cond == 2){
+        //messages
+        document.getElementById('nav_msg').className = 'shake2 disable_url';
+        document.getElementById('nav_rss').className = 'shake2';
+        document.getElementById('nav_top').className = 'shake2';
+        
+        
+    }
+    else if(cond==3){
+       //rss 
+        document.getElementById('nav_msg').className = 'shake2 ';
+        document.getElementById('nav_rss').className = 'shake2 disable_url';
+        document.getElementById('nav_top').className = 'shake2';
+        
+    }
+    
+        else if(cond==4){
+       //rss 
+        document.getElementById('nav_msg').className = 'shake2 ';
+        document.getElementById('nav_rss').className = 'shake2';
+        document.getElementById('nav_top').className = 'shake2 disable_url';
+    }
+    
+    
     if(helper == 'second'){
     	    $.ajax({url: url,
     	    beforeSend: function() {

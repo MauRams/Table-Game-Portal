@@ -31,6 +31,7 @@
 	padding: 10px 0px 0px 10px;
 }
 #hintbox{
+    z-index:1000;
     display:none;
     position: absolute;
     font-size: 16px;
@@ -74,25 +75,18 @@ background:#808080;
 <script>
 $(document).ready(function() {
 
+
  $('.hover').mousemove(function(e){ 
        var hovertext = $(this).attr('hinttext'); 
        
          $('#hintbox').text(hovertext).show();
         
-    $('#hintbox').css('left',e.clientY+15).css('left',e.clientX-350);})
+    $('#hintbox').css('top',e.clientY-25).css('left',e.clientX-450);})
      .mouseout(function(){
     $('#hintbox').hide();
  });
 }); 
 </script>
- 
- 
-
-
- 	
- 	
- 
-				
 <div  id="main-div">  
  
                 

@@ -158,8 +158,11 @@ app.post('/writeScoreOfGame', function(req, res) {
 	});
 	
 		app.get('/score', isLogged, function(req, res) {
+		    
+		    
 	var paths = './xmlStorage/last_game_scores.xml';
 	var transform = './xsltStorage/recent_games.xsl';
+	
 	res.send(xslt_transform(transform,paths));
     });
 			//RETURNING SENDING FORM
@@ -198,7 +201,6 @@ app.post('/writeScoreOfGame', function(req, res) {
         app.get('/countGame2',isLogged, function(req, res){
         writeScore('game2');
     }); 
-            
 };
 function isLogged(req, res, next){
     // if user is authenticated in the session, carry on 

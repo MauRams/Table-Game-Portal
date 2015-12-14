@@ -116,3 +116,6 @@ box-shadow: 17px 13px 34px -2px rgba(0,0,0,0.75);
     background-color:#FAFAFA;
     scrollbar-face-color: #fafafa;
 }
+.bottom_marg{
+    margin-bottom:15px;
+}

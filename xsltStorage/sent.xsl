@@ -22,8 +22,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         
           <a href="#" class="list-group-item">
           <span class="glyphicon glyphicon-star-empty"></span>
-          <span class="name" style="min-width: 120px;display: inline-block;">To: <xsl:value-of select="user"/></span>
-          <br/>
+          <span class="name" style="min-width: 120px;display: inline-block;color:orange;font-weight:bold">To: <xsl:value-of select="user"/>;</span>
+          <br/><br/>
      <span class="text-muted" style="font-size: 11px;"><xsl:value-of select="text"/></span></a>
      <span class="badge"><xsl:value-of select="date"/></span>
       </xsl:for-each>

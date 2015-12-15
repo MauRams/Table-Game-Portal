@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages> <recieved><text>
+    Welcome! In this section you will 
+    be able to view all incoming messages 
+    from other users</text><user>TableGamePortalBOT@tgame.ru</user>
+    <date>-</date></recieved><sent><text>Hi, In this section you will 
+    be able to view all outgoing messages to other users</text>
+    <user>TableGamePortalBOT@tgame.ru</user><date>-</date></sent>
+    <sent><text>Your Message Here</text><user>you</user>
+    <date>14/11/2015 16:39</date></sent><recieved><text>hello me !!</text>
+    <user>you</user><date>14/11/2015 16:40</date></recieved><sent>
+        <text>Hi ! how is things?</text><user>you</user>
+        <date>14/11/2015 16:48</date></sent><recieved>
+            <text>All good thanks, what are you at?</text>
+            <user>you</user><date>14/11/2015 16:49</date>
+            </recieved></messages>

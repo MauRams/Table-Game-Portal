@@ -1,11 +1,30 @@
+
+<style>
+.border{
+padding:50px;
+margin-top:10px;
+}
+#h1{
+    text-align:center;
+    color:orange;
+    font-weight:bold
+}
+</style>
+
+
 <div class='border'>
-    <h3>New Message</h3>
-    <p>(has to be existing registered usere e-mail)</p>
-    <h3>To User: <input style='color:black;' id='to_user' type="text" name="fname"></h3>
-    <h3>Message:</h3>
-    <textarea style='color:black;' id='message_text' rows="6" cols="50">Your Message Here</textarea>
+    
+    <h1 id="h1">New Message</h1>
+    
+    <h3 style="color:orange;font-weight:bold">To User: <h3>
+        
+        <input class="form-control" style='color:black;' id='to_user' type="text" name="fname">
+    <h3 style="color:orange;font-weight:bold">Message:</h3>
+    
+    <textarea style='color:black;' class="form-control" id='message_text' rows="6" cols="50">Your Message Here</textarea>
     <br/>
-    <button style='color:black;'id='send_message'>send</button>
+      <button style="font-weight:bold"id='send_message'type="button" class="btn btn-primary center-block">send</button>
+
 </div>
 
 <script>
@@ -16,7 +35,9 @@ var message_text = document.getElementById('message_text').value,
                    document.getElementById('to_user').value = '';
                    document.getElementById('message_text').value = '';
 
-var messageObj = {message:message_text,user:to_user};
+var messageObj =
+{ message:message_text,
+user:to_user};
 
 if (user ===to_user){
     alert('Sorry, but you cant send message to yourself');

@@ -7,9 +7,11 @@
         <style>
           table{
           padding-bottom:10px;
+          border: 2px solid black;
           }
           td{
-          color: #fff;
+          color: #000;
+          padding: 5px;
           }
           th{
           background-color: yellow;

@@ -16,9 +16,9 @@ module.exports = function(app, passport) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     		//XSLT return to the user ON REQUEST
-	app.get('/rss', isLogged, function(req, res) {
-	var paths = './rss/rss.xml';
-	var transform = './rss/highScore.xsl';
+	app.get('/hiScore', isLogged, function(req, res) {
+	var paths = './hiScore/hiScore.xml';
+	var transform = './hiScore/highScore.xsl';
 	res.send(xslt_transform(transform,paths));
     });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

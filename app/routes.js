@@ -51,12 +51,7 @@ module.exports = function(app, passport) {
 	});
 	
 		//RETURNS Snake Game
-//	app.get('/snake', isLogged, function(req, res) {
 
-//		res.render('snake.ejs', {
-//			user : req.user
-//		});
-//	});
 	
 	 app.get('/snake', isLogged, function(req, res){
         res.render('snake.ejs');

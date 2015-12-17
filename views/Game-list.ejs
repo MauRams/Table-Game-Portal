@@ -1,105 +1,69 @@
-
-<style>
-footer a{
-    color:yellow;font-weight:bold;
-    text-decoration:none;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color:	#00bfff;
-}
-footer{
     
-   padding:2%;
-	
-	background:#333;
-	
-	color:#fff;
-	text-align:center;
-}
-#p2{
-    
-    color:white;
-    padding: 10px 10px 10px 10px;
-}
-#p1{
-    font-size:16px;
-    margin-left:5%;
-    color:white;
-}
-#h2{
-    text-align:center;
-    font-size:28px;
-    color:	#87CEFA;
-    margin-left:3%;
-    font-weight:bold;
-}
-
-
-.col-md-11{
-    width:99%;
-}
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-.img-circle{
-	 border-radius: 25px;
-	padding: 10px 0px 0px 10px;
-}
-#hintbox{
-    z-index:1000;
-    display:none;
-    position: absolute;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-    border: 1px solid red;
-    padding: 8px;
-    border-radius:10px;
-   width: 20%;
-   text-align:center}
-   
-#main-div{
-	
-	
-background-image:url('img/gray-background.jpg');
-   
-}
-
-
-.banner_holder{
-    width: 100%;
-    height: 90px;
-    min-height: 150px;
-    position: relative;
-  
-    box-shadow: 2px 2px 2px 5px #161314;
-   
-}
-
-.banner_holderImage{
-    
-    height: 100%;
-    position:relative;
-    background:   url("img/images/image7.jpg")no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-</style>
- 
- 
- <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-$(document).ready(function() {
-
-
- $('.hover').mousemove(function(e){ 
-       var hovertext = $(this).attr('hinttext'); 
-       
-         $('#hintbox').text(hovertext).show();
+    <style>
+    #p2{
         
+        color:white;
+        padding: 10px 10px 10px 10px;
+    }
+    #p1{
+        font-size:16px;
+        margin-left:5%;
+        color:white;
+    }
+    #h2{
+        text-align:center;
+        font-size:28px;
+        color:	#87CEFA;
+        margin-left:3%;
+        font-weight:bold;
+    }
+    
+    
+    .col-md-11{
+        width:99%;
+    }
+    .col-centered{
+        float: none;
+        margin: 0 auto;
+    }
+    .img-circle{
+    	 border-radius: 25px;
+    	padding: 10px 0px 0px 10px;
+    }
+    #hintbox{
+        z-index:1000;
+        display:none;
+        position: absolute;
+        font-size: 16px;
+        background-color: black;
+        color: white;
+        border: 1px solid red;
+        padding: 8px;
+        border-radius:10px;
+       width: 20%;
+       text-align:center}
+       
+    #main-div{
+    	
+    	
+    background-image:url('img/gray-background.jpg');
+       
+    }
+    
+    
+    .banner_holder{
+        width: 100%;
+        height: 90px;
+        min-height: 150px;
+        position: relative;
+      
+        box-shadow: 2px 2px 2px 5px #161314;
+       
+    }
+    
+    .banner_holderImage{
+        
+<<<<<<< HEAD
     $('#hintbox').css('top',e.clientY-25).css('left',e.clientX-450);})
      .mouseout(function(){
     $('#hintbox').hide();
@@ -109,23 +73,54 @@ $(document).ready(function() {
 
 <div id="top"></div>
 <div  id="main-div">  
+=======
+        height: 100%;
+        position:relative;
+        background:   url("img/images/image7.jpg")no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    </style>
+     
+     
+     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    
+    
+     $('.hover').mousemove(function(e){ 
+           var hovertext = $(this).attr('hinttext'); 
+           
+             $('#hintbox').text(hovertext).show();
+            
+        $('#hintbox').css('top',e.clientY-25).css('left',e.clientX-450);})
+         .mouseout(function(){
+        $('#hintbox').hide();
+     });
+    }); 
+    </script>
+    <div id="top"></div>
+    <div id="main-div">  
+>>>>>>> 0989134d32955ec0d56ae7f18b677c4cd37de0c6
  
                 
-                         <div class="row"><!-- start the banner -->
-                         
-                         
-                			    <div class="col-md-11 col-centered">   
-                			    
-                									    <div class="banner_holder">
-                						    <div class="banner_holderImage"></div>  
-                						   
-                										</div>
+         <div class="row"><!-- start the banner -->
+         
+         
+			    <div class="col-md-11 col-centered">   
+			    
+					<div class="banner_holder">
+						    <div class="banner_holderImage">
+						        
+						    </div>  
+						   
+					</div>
                 				 	
                 			
-                	           </div>
+                </div>
                 	 
                 	 
-                	 	</div><!--	finish the banner--><br>
+        </div><!--	finish the banner--><br>
 	 	
 	 	<div class="row"><!--start the paragraph-->
 				
@@ -142,8 +137,7 @@ $(document).ready(function() {
         			</div>
 
 		</div><!--finish the paragraph-->		
-				
-											<div id="hintbox"></div>
+		<div id="hintbox"></div>
 												
 										
 											
@@ -182,8 +176,9 @@ $(document).ready(function() {
 			    </div>
 			
 			   <div class="col-sm-3">
-			   
+			            <a href = 'javascript:layerChange("tictactoe")' class = "hover" hinttext = "Click to Play">
 			   			<img src="img/tictac1.png" class=" img-circle img-responsive center-block" alt="Circular holding image"/>
+			   			</a>
 			   
 			   </div>
 			   

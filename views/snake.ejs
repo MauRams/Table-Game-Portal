@@ -10,7 +10,7 @@
 	#body{
 		background-image: url('snake-back.jpg')
 	}
-	canvas {
+	canvass {
 		width:50%;
 		height: 90%;
 		display: block;
@@ -48,7 +48,7 @@
 				KEY_RIGHT = 39,
 				KEY_DOWN  = 40,
 				
-				canvas,	  
+				canvass,	  
 				ctx,	  
 				keystate, 
 				frames,   
@@ -120,12 +120,12 @@
 				
 				function main() {
 				
-					canvas = document.createElement("canvas");
-					canvas.width = COLS*20;
-					canvas.height = ROWS*20;
-					ctx = canvas.getContext("2d");
+					canvass = document.createElement("canvass");
+					canvass.width = COLS*20;
+					canvass.height = ROWS*20;
+					ctx = canvass.getContext("2d");
 					
-					document.body.appendChild(canvas);
+					document.body.appendChild(canvass);
 					
 					ctx.font = "12px Helvetica";
 					frames = 0;
@@ -155,7 +155,7 @@
 					update();
 					draw();
 				
-					window.requestAnimationFrame(loop, canvas);
+					window.requestAnimationFrame(loop, canvass);
 				}
 				
 				function update() {
@@ -218,8 +218,8 @@
 				
 				function draw() {
 				
-					var tw = canvas.width/grid.width;
-					var th = canvas.height/grid.height;
+					var tw = canvass.width/grid.width;
+					var th = canvass.height/grid.height;
 				
 					for (var x=0; x < grid.width; x++) {
 						for (var y=0; y < grid.height; y++) {
@@ -240,7 +240,7 @@
 					}
 				
 					ctx.fillStyle = "red";
-					ctx.fillText("SCORE: " + score, 10, canvas.height-10);
+					ctx.fillText("SCORE: " + score, 10, canvass.height-10);
 				}
 				
 				main();

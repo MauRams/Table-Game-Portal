@@ -1,0 +1,81 @@
+	
+	<!-- Javascript Game Tutorial, Create Tic Tac Toe
+	    Agustinus Bambang Eko Mulyono  -->
+
+<!-- https://www.youtube.com/watch?v=YGYS-du4F3Y -->
+
+<div id='tictacback'>
+
+
+    <script src = "tictactoe/ticScript.js"></script>
+    <link rel = "stylesheet" href = "ticStyle.css"/>
+    <script>
+        //ADDING USERNAME TO THE GAME
+        	$( document ).ready(function() { 
+        	   $('.tic_game_user').html(user);
+        	});
+    </script>
+	<!-- start of tic tac toe game -->
+				<div id = "box_tic" class ="container-fluid">
+					<div class = "row">
+							<div id="box1">
+								<!--Each button is wrapped in its own div to align it to a grid-->
+								<input type="button" id= "btn1" class="button" onclick="clickBtn('btn1')"/>
+							</div>
+							<div id="box2">
+								<input type="button" id= "btn2" class="button" onclick="clickBtn('btn2')"/>
+							</div>
+							<div id="box3">
+								<input type="button" id= "btn3" class="button" onclick="clickBtn('btn3')"/>
+							</div>
+					</div>
+					<div class = "row">
+							<div id="box4">
+								<input type="button" id= "btn4" class="button" onclick="clickBtn('btn4')"/>
+							</div>
+							<div id="box5">
+								<input type="button" id= "btn5" class="button" onclick="clickBtn('btn5')"/>
+							</div>
+							<div id="box6">
+								<input type="button" id= "btn6" class="button" onclick="clickBtn('btn6')"/>
+							</div>
+					</div>
+					<div class = "row">
+							<div id="box7">
+								<input type="button" id= "btn7" class="button" onclick="clickBtn('btn7')"/>
+							</div>
+							<div id="box8">
+								<input type="button" id= "btn8" class="button" onclick="clickBtn('btn8')"/>
+							</div>
+							<div id="box9">
+								<input type="button" id= "btn9" class="button" onclick="clickBtn('btn9')"/>
+							</div>
+					</div>
+				</div>
+
+			<!-- end of tic tac toe game -->
+			<div class = "container">
+
+				<div class = "row">
+				
+							<!--refresh the page to begin a new game-->
+						<span><input type = "reset" id= "newGame" class = "btn-reset" onclick = "reset()"/></span>
+
+							
+				
+							<!--display logged in users name, code borrowed from Deniss card-game-->
+						<span>Your name is: </span><span class = "tic_game_user"></span>
+						<span id ="p1_tic"></span>
+						<p>Player One Wins : </p>
+						
+							<!--originally wanted a score count of the two players.-->
+				
+					
+							
+						<p>Player Two Wins : </p><span id ="p2_tic"></span>
+
+				</div>
+			</div>
+		</div>
+
+</div>

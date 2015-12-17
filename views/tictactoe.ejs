@@ -16,7 +16,9 @@
         	});
     </script>
 	<!-- start of tic tac toe game -->
-				<div id = "box_tic" class ="container-fluid">
+	<div id = "box_tic" class ="container-fluid">
+			<h1 id = "ticHead" class = "text-center">Tic Tac Toe</h1>
+		
 					<div class = "row">
 							<div id="box1">
 								<!--Each button is wrapped in its own div to align it to a grid-->
@@ -61,21 +63,20 @@
 							<!--refresh the page to begin a new game-->
 						<span><input type = "reset" id= "newGame" class = "btn-reset" onclick = "reset()"/></span>
 
-							
+				</div>
+				<div class = "row">
 				
 							<!--display logged in users name, code borrowed from Deniss card-game-->
-						<span>Your name is: </span><span class = "tic_game_user"></span>
+						<span id = "uName">Logged in as: </span>
+						<span id = "uName" class = "tic_game_user"></span>
 						<span id ="p1_tic"></span>
-						<p>Player One Wins : </p>
+						<!--<p>Player One Wins : </p>-->
 						
 							<!--originally wanted a score count of the two players.-->
-				
+				</div>
 					
 							
-						<p>Player Two Wins : </p><span id ="p2_tic"></span>
+						<!--<p>Player Two Wins : </p><span id ="p2_tic"></span>-->
 
 				</div>
-			</div>
-		</div>
-
 </div>

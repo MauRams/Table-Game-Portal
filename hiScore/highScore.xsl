@@ -15,6 +15,7 @@
           }
           th{
           background-color: yellow;
+          color: #000;
           }
           
           table{

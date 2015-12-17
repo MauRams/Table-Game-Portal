@@ -106,7 +106,7 @@ function winner(winner){//determine the winning conditions
 
 function reset(btn){
 		
-		location.reload();
+		window.location.href='javascript:layerChange("tictactoe")';
 		// $('btn').reload();
 
 	}

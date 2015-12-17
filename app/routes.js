@@ -49,6 +49,20 @@ module.exports = function(app, passport) {
 			user : req.user // get the user out of session and pass to template
 		});
 	});
+	
+		//RETURNS Snake Game
+//	app.get('/snake', isLogged, function(req, res) {
+
+//		res.render('snake.ejs', {
+//			user : req.user
+//		});
+//	});
+	
+	 app.get('/snake', isLogged, function(req, res){
+        res.render('snake.ejs');
+    });
+	
+	
     app.get('/game-list', isLogged, function(req, res){
         res.render('Game-list.ejs');
     });

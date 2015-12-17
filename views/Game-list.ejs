@@ -1,5 +1,23 @@
 
 <style>
+footer a{
+    color:yellow;font-weight:bold;
+    text-decoration:none;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color:	#00bfff;
+}
+footer{
+    
+   padding:2%;
+	
+	background:#333;
+	
+	color:#fff;
+	text-align:center;
+}
 #p2{
     
     color:white;
@@ -88,6 +106,7 @@ $(document).ready(function() {
  });
 }); 
 </script>
+<divid="top"></div>
 <div  id="main-div">  
  
                 
@@ -179,9 +198,9 @@ $(document).ready(function() {
 			 
 			 
 			 <hr/>
-	<div class="row">
+	<div class="row " style="margin-left:10%"><!--snake game start-->
 			 
-			 	<div class="col-sm-3">
+			 	<div class="col-sm-4">
 														
 													
 				<div id="hintbox"></div>
@@ -189,41 +208,56 @@ $(document).ready(function() {
 					<a href='javascript:layerChange("card_game1")' 	 class="hover" hinttext="Play here" >
 												 		
 			
-				       <img src="img/big_icon_card.jpg" class=" img-circle img-responsive center-block"alt="Circular holding image"/>
+				       <img src="img/snake.png" class=" img-circle img-responsive center-block"alt="Circular holding image"/>
 								
 					</a>
 													     	
 		     </div>
 		
 		
-				 <div class="col-sm-3">
+				 <div class="col-sm-6">
 			   
 					    
-					     <p id="p2">is simply dummy text of the printing and typesetting<br>
-					     industry. Lorem Ipsum has been the industry's standard dummy<br>
-					     text ever since the 1500s </p>
+					     <p id="p2">The snake game was developed in 1976.<br>
+					    The game is very simple but became very famous
+					    after being preloaded by <b>Nokia mobile phones </b> in 1998 </p>
 					   
 			    </div>
 			
-			   <div class="col-sm-3">
-			   
-			   			<img src="img/game1.jpg" class=" img-circle img-responsive center-block" alt="Circular holding image"/>
-			   
-			   </div>
-			   
-			   <div class="col-sm-3">
-			   
-					    
-					     <p id="p2">is simply dummy text of the printing and typesetting<br>
-					     industry. Lorem Ipsum has been the industry's standard dummy<br>
-					     text ever since the 1500s</p>
-					   
-			    </div>
+			 
 			
-		</div>	   
+		</div>	  <!--snake game finishing--> 
+		
+		<br/>
 			
+			<div class="footer">
+	
+
 			
+			<footer>&copy; NCI Students * The Simpsons *<br/><a href="#top"> Back to top</a> </footer>
+	       
+	
+	</div>
 	
     
  
  </div>  
+ 
+ 
+<!--next script from https://css-tricks.com-->
+ <script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>

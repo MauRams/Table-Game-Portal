@@ -73,12 +73,14 @@
     </style>
      
      
-     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery-1.11.3.js"></script>
     <script>
     $(document).ready(function() {
     
     
-     $('.hover').mousemove(function(e){ 
+     $('.hover').mousemove(function(e){
+         
+         
            var hovertext = $(this).attr('hinttext'); 
            
              $('#hintbox').text(hovertext).show();

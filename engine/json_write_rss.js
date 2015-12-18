@@ -25,15 +25,18 @@ module.exports = function(param){
       
       
   }
-  else if(param == 'game2'){
+   if(param == 'game2'){
         var stringValue = readJson.rss[1].description,
         short = parseInt(stringValue.substr(29));
+          short+=1;
         var ss = 'Avalable, games played total:'+short;
-              short+=1;
+      
         readJson.rss[1].description = ss;
+        console.log(ss);
+        
         
       var JSONformated = JSON.stringify(readJson, null, 4);
-      fs.writeFileSync('../jsonStorage/rss.json', JSONformated);
+      fs.writeFileSync('./jsonStorage/rss.json', JSONformated);
       
     }
     

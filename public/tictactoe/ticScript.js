@@ -50,6 +50,8 @@ function winner(winner){//determine the winning conditions
 		document.getElementById("btn7").value == "X"
 		){
 		alert(p1 + " WINS!!");
+		//writing score
+		writeScore();
 		reset();//manually refresh the page
 		
 		}else if(document.getElementById("btn1").value == "O" &&
@@ -77,6 +79,8 @@ function winner(winner){//determine the winning conditions
 		document.getElementById("btn5").value == "O" &&
 		document.getElementById("btn7").value == "O"
 		){	alert(p2 + " WINS!!");
+		//writing score
+		writeScore();
 			reset();//manually refresh the page
 			
 		}
@@ -110,3 +114,21 @@ function reset(btn){
 		// $('btn').reload();
 
 	}
+
+
+function writeScore(){
+     var messageObj ={game:'TicTacToe',player_score:'x',computer_score:'x'};
+        $.post("/writeScoreOfGame",
+        {
+          message: messageObj
+        },
+        function(data,status){ 
+          if(data== 'done'){
+              alert('Your result was recorder!');
+          }
+        });
+        // COUNT THAT GAME WAS PLAYED
+   $.get("/countGame2", function(data, status){
+       console.log('Game Played');
+    });
+}
